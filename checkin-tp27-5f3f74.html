@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://script.google.com https://script.googleusercontent.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; media-src 'self' blob: data: mediastream:; connect-src 'self' https://script.google.com https://script.googleusercontent.com; object-src 'none'; base-uri 'self'">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Check-in — Taufiqulhadi &amp; Yolla Yulia Putri</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.8/html5-qrcode.min.js"></script>
+<script>/* fallback: jika cdnjs gagal, muat dari jsDelivr */
+if(typeof Html5Qrcode==="undefined"){document.write('<scr'+'ipt src="https://cdn.jsdelivr.net/npm/html5-qrcode@2.3.8/html5-qrcode.min.js"><\/scr'+'ipt>');}
+</script>
+<style>
+:root{--bg:#F3EEE3;--ink:#2A211D;--soft:#6b5d50;--marun:#6E1423;--marund:#5C1020;--zamrud:#1F6B54;--emas:#C49A2F;--gading:#FBF7EF;--navy:#243B53;--line:rgba(42,33,29,.12);--ok:#1FAA53;--warn:#C8842B;--bad:#B23A48;--serif:'Fraunces',Georgia,serif;--sans:'Plus Jakarta Sans',system-ui,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.55;padding:18px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:520px;margin:0 auto}
+.topbar{display:flex;justify-content:flex-end;margin-bottom:4px}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.lang button{border:none;background:transparent;font-family:var(--sans);font-size:12px;font-weight:600;padding:6px 12px;cursor:pointer;color:var(--soft)}
+.lang button.on{background:var(--marun);color:#fff}
+header{text-align:center;margin:4px 0 18px}
+header .k{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--zamrud);font-weight:700}
+header h1{font-family:var(--serif);font-size:26px;color:var(--marun);margin-top:4px}
+header p{font-size:13px;color:var(--soft)}
+.card{background:var(--gading);border:1px solid var(--line);border-radius:18px;padding:18px;margin-bottom:16px;box-shadow:0 8px 24px rgba(0,0,0,.05)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--sans);font-weight:600;font-size:14px;border:none;border-radius:999px;padding:12px 20px;cursor:pointer;text-decoration:none;transition:.2s;background:var(--marun);color:#fff}
+.btn:hover{background:var(--marund)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn.ghost:hover{border-color:var(--emas)}
+.btn.wa{background:#1FAA53}.btn.wa:hover{background:#178c44}
+.btn.full{width:100%}
+.row{display:flex;gap:10px;flex-wrap:wrap}
+#reader{width:100%;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#000;min-height:60px}
+.hint{font-size:12px;color:var(--soft);margin-top:10px;text-align:center}
+.manual{display:flex;gap:8px;margin-top:14px}
+.manual input{flex:1;font-family:var(--sans);font-size:15px;padding:11px 14px;border:1.5px solid var(--line);border-radius:10px;background:#fff}
+.manual input.up{text-transform:uppercase}
+.manual input:focus{outline:none;border-color:var(--emas)}
+#review{background:var(--gading)}
+.jmlbox{margin:14px auto 0;max-width:240px}
+.jmlbox label{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--soft);font-weight:600;margin-bottom:6px;text-align:center}
+.jmlbox input,.jmlbox select{width:100%;font-family:var(--serif);font-size:22px;text-align:center;text-align-last:center;padding:10px 14px;border:1.5px solid var(--line);border-radius:12px;background:#fff;color:var(--marun)}
+.jmlbox select{-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%23C49A2F' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;cursor:pointer}
+.jmlbox input:focus,.jmlbox select:focus{outline:none;border-color:var(--emas)}
+.jmlbox input[readonly]{background:#f4efe4;color:var(--ink)}
+#rvNote{font-family:var(--sans);font-size:15px;text-align:left;color:var(--ink)}
+.result{display:none;text-align:center;border-radius:18px;padding:22px;margin-bottom:16px;border:1px solid var(--line)}
+.result.show{display:block;animation:fade .3s}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.result .badge{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:13px;letter-spacing:.04em;text-transform:uppercase;padding:7px 16px;border-radius:999px;color:#fff;margin-bottom:12px}
+.result .nm{font-family:var(--serif);font-size:30px;color:var(--marun);line-height:1.1}
+.result .meta{color:var(--soft);font-size:14px;margin-top:4px}
+.result .code{font-family:var(--serif);letter-spacing:.12em;font-size:15px;color:var(--ink);margin-top:10px}
+.r-ok{background:rgba(31,170,83,.1)}.r-ok .badge{background:var(--ok)}
+.r-warn{background:rgba(200,132,43,.12)}.r-warn .badge{background:var(--warn)}
+.r-bad{background:rgba(178,58,72,.1)}.r-bad .badge{background:var(--bad)}.r-bad .nm{color:var(--bad)}
+.stats{display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+.stat{flex:1;min-width:68px;background:var(--gading);border:1px solid var(--line);border-radius:14px;padding:14px;text-align:center}
+.filterbar{display:flex;gap:8px;margin:0 0 10px;flex-wrap:wrap}
+.fbtn{border:1px solid var(--line);background:#fff;color:var(--soft);font-family:var(--sans);font-size:12px;font-weight:600;padding:7px 12px;border-radius:999px;cursor:pointer}
+.fbtn.on{background:var(--marun);color:#fff;border-color:var(--marun)}
+.guest .gnote{font-size:12px;color:var(--zamrud);margin-top:2px}
+.guest .gact{display:flex;gap:8px;margin-top:6px}
+.guest .gact button{font:inherit;font-size:12px;padding:4px 10px;border-radius:8px;border:1px solid var(--line,#e3d9c4);background:#fff;color:var(--marun,#6E1423);cursor:pointer}
+.guest .gact .gdel{color:#b3261e}
+.guest .gact .gcheck{color:#147a3b;border-color:#9ad3b0;font-weight:600}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center;z-index:60;padding:16px}
+.modalbox{background:#fff;border-radius:16px;padding:20px;max-width:430px;width:100%;box-shadow:0 18px 50px rgba(0,0,0,.3)}
+.histrow{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid var(--line,#e3d9c4);font-size:13px}
+.histrow .ha{color:var(--marun,#6E1423);font-weight:600}
+.histrow .ht{color:#888;font-size:11px;white-space:nowrap}
+.stat b{font-family:var(--serif);font-size:26px;color:var(--marun);display:block}
+.stat span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft)}
+.guest{display:flex;justify-content:space-between;align-items:center;padding:10px 4px;border-bottom:1px dotted var(--line);font-size:14px}
+.guest:last-child{border-bottom:none}
+.guest .gn{font-weight:600}.guest .gc{font-size:11px;color:var(--soft);font-family:var(--serif);letter-spacing:.08em}
+.pill{font-size:11px;font-weight:600;padding:3px 10px;border-radius:999px}
+.pill.in{background:rgba(31,170,83,.14);color:#147a3b}.pill.no{background:rgba(0,0,0,.06);color:var(--soft)}
+.sectitle{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--zamrud);font-weight:700;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center}
+.warnbox{background:#FBEFD7;border:1px solid #E6C98A;color:#7a5a16;border-radius:12px;padding:12px 14px;font-size:13px;margin-bottom:16px}
+.beep{position:fixed;inset:0;background:var(--ok);opacity:0;pointer-events:none;transition:opacity .15s;z-index:99}
+.beep.flash{opacity:.18}
+</style>
+</head>
+<body>
+<div class="beep" id="flash"></div>
+<div class="wrap">
+  <div class="topbar"><div class="lang"><button data-lang="id" class="on">ID</button><button data-lang="en">EN</button></div></div>
+  <header>
+    <div class="k" data-i18n="s.kicker">Check-in Tamu</div>
+    <h1>Taufiqulhadi &amp; Yolla Yulia Putri</h1>
+    <p data-i18n="s.sub">Pindai barcode pada undangan tamu untuk mencatat kehadiran.</p>
+  </header>
+
+  <!-- LOGIN PANITIA -->
+  <div class="card" id="login" style="display:none">
+    <div class="sectitle" data-i18n="s.pinTitle">Login Panitia</div>
+    <div class="manual">
+      <input id="pinInput" type="password" inputmode="numeric" data-i18n-ph="s.pinLabel" placeholder="PIN Panitia">
+      <button class="btn" id="pinBtn" data-i18n="s.pinBtn">Masuk</button>
+    </div>
+    <div class="hint" id="pinMsg" data-i18n="s.pinHint">Masukkan PIN yang ditetapkan di Apps Script (ADMIN_PIN).</div>
+  </div>
+
+  <!-- APLIKASI -->
+  <div id="app" style="display:none">
+    <div class="warnbox" id="cfgWarn" data-i18n-html="s.warn">⚠️ <b>SHEETS_URL belum diisi.</b> Halaman berjalan dalam <b>mode demo</b> (hanya menampilkan kode, tidak tersimpan). Isi variabel <code>SHEETS_URL</code> &amp; login PIN untuk validasi penuh.</div>
+
+    <div class="result" id="review">
+      <div class="badge" style="background:var(--zamrud)" data-i18n="s.rvTitle">Tinjau Data Tamu</div>
+      <div class="nm" id="rvName">—</div>
+      <div class="meta" id="rvStatus">—</div>
+      <div class="code" id="rvCode">—</div>
+      <div class="meta" id="rvAlready" style="display:none;color:var(--warn);font-weight:600"></div>
+      <div class="jmlbox"><label data-i18n="s.rvJml">Jumlah Hadir</label><input id="rvJumlah" type="text" inputmode="numeric" autocomplete="off" readonly></div>
+      <div class="jmlbox"><label data-i18n="s.rvNote">Catatan</label><input id="rvNote" type="text" autocomplete="off" data-i18n-ph="s.rvNotePh" placeholder="mis. No. meja, rombongan, dll"></div>
+      <div class="rbtns" style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:16px">
+        <button class="btn" id="rvConfirm" data-i18n="s.rvConfirm">✓ Konfirmasi Check-in</button>
+        <button class="btn ghost" id="rvEdit" data-i18n="s.rvEdit">✎ Edit Jumlah</button>
+        <button class="btn ghost" id="rvCancel" data-i18n="s.rvCancel">✕ Batal</button>
+      </div>
+    </div>
+    <div class="result" id="result"></div>
+
+    <div class="card" id="camCard" style="display:none">
+      <div class="sectitle" data-i18n="s.cam">Pemindai Kamera</div>
+      <div id="reader"></div>
+      <div class="row" style="margin-top:12px">
+        <button class="btn full" id="startBtn" data-i18n="s.start">▶ Mulai Kamera</button>
+        <button class="btn ghost full" id="stopBtn" style="display:none" data-i18n="s.stop">■ Hentikan</button>
+      </div>
+      <div class="hint" data-i18n="s.hint">Kamera memerlukan akses HTTPS &amp; izin kamera. Arahkan ke QR/Code-39 pada undangan.</div>
+      <div class="manual">
+        <input id="manualCode" class="up" data-i18n-ph="s.manualPh" placeholder="Atau ketik kode reservasi (RSVP-...)" autocomplete="off" autocapitalize="characters" spellcheck="false">
+        <button class="btn" id="manualBtn" data-i18n="s.checkin">Check-in</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="sectitle"><span data-i18n="s.guests">Daftar Tamu</span><span style="display:flex;gap:8px"><button class="btn ghost" id="exportBtn" style="padding:7px 12px;font-size:12px" data-i18n="s.export">⤓ Ekspor</button><button class="btn ghost" id="refreshBtn" style="padding:7px 12px;font-size:12px" data-i18n="s.refresh">↻ Muat Ulang</button></span></div>
+      <div class="stats">
+        <div class="stat"><b id="stTotal">–</b><span data-i18n="s.stRsvp">RSVP</span></div>
+        <div class="stat"><b id="stHadir">–</b><span data-i18n="s.stHadir">Hadir</span></div>
+        <div class="stat"><b id="stChecked">–</b><span data-i18n="s.stChecked">Check-in</span></div>
+        <div class="stat"><b id="stPeople">–</b><span data-i18n="s.stPeople">Orang Hadir</span></div>
+      </div>
+      <div class="manual" style="margin-bottom:6px"><input id="search" data-i18n-ph="s.searchPh" placeholder="Cari nama atau kode…" autocomplete="off"></div>
+      <div class="filterbar"><button type="button" class="fbtn on" data-filter="all" data-i18n="s.fAll">Semua</button><button type="button" class="fbtn" data-filter="no" data-i18n="s.fNo">Belum Hadir</button><button type="button" class="fbtn" data-filter="in" data-i18n="s.fIn">Sudah</button></div>
+      <div id="guestList"><div class="hint" data-i18n="s.listHint">Tekan "Muat Ulang" untuk menampilkan daftar tamu.</div></div>
+    </div>
+
+    <div class="card">
+      <div class="sectitle"><span data-i18n="s.histTitle">Riwayat</span><button class="btn ghost" id="histBtn" style="padding:7px 12px;font-size:12px" data-i18n="s.histLoad">↻ Muat Riwayat</button></div>
+      <div class="hint" data-i18n="s.histHint">Riwayat batal check-in &amp; penghapusan tamu.</div>
+      <div id="histList"></div>
+    </div>
+    <div class="hint" style="text-align:center;opacity:.55;margin-top:8px">Scanner v11 · 2026-06-20</div>
+  </div>
+</div>
+
+<div id="editModal" class="modal" style="display:none">
+  <div class="modalbox">
+    <div class="sectitle" data-i18n="s.editTitle">Edit Data Tamu</div>
+    <div class="jmlbox"><label data-i18n="s.edName">Nama</label><input id="edName" type="text" autocomplete="off"></div>
+    <div class="jmlbox"><label data-i18n="s.edStatus">Kehadiran</label><select id="edStatus"><option value="Hadir" data-i18n="s.optHadir">Hadir</option><option value="Tidak Hadir" data-i18n="s.optTidak">Tidak Hadir</option><option value="Belum" data-i18n="s.optBelum">Belum</option></select></div>
+    <div class="jmlbox"><label data-i18n="s.edJml">Jumlah Tamu</label><input id="edJml" type="number" min="0" inputmode="numeric" autocomplete="off"></div>
+    <div class="jmlbox"><label data-i18n="s.edNote">Catatan</label><input id="edNote" type="text" autocomplete="off"></div>
+    <div class="rbtns" style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:14px">
+      <button class="btn" id="edSave" data-i18n="s.edSave">Simpan</button>
+      <button class="btn ghost" id="edDelete" data-i18n="s.edDelete">Hapus Tamu</button>
+      <button class="btn ghost" id="edCancel" data-i18n="s.edCancel">Batal</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ===== KONFIGURASI ===== */
+var SHEETS_URL = "https://script.google.com/macros/s/AKfycbyvuJq_QdIst8jG1l86m8OH9JF-OyY7RVWDtHungYPO1s6mJ-aHlO-2x_uJpahU-qxO/exec";   // tempel URL Web App (.../exec) yang sama dengan undangan
+var PIN = "";          // diisi otomatis dari layar Login Panitia
+
+/* ===== I18N ANTARMUKA SCANNER ===== */
+var SI18N={
+ id:{
+  "s.kicker":"Check-in Tamu","s.sub":"Pindai barcode pada undangan tamu untuk mencatat kehadiran.",
+  "s.warn":"⚠️ <b>SHEETS_URL belum diisi.</b> Halaman berjalan dalam <b>mode demo</b> (hanya menampilkan kode, tidak tersimpan). Isi variabel <code>SHEETS_URL</code> &amp; login PIN untuk validasi penuh.",
+  "s.cam":"Pemindai Kamera","s.start":"▶ Mulai Kamera","s.stop":"■ Hentikan",
+  "s.hint":"Kamera memerlukan akses HTTPS & izin kamera. Arahkan ke QR/Code-39 pada undangan.",
+  "s.manualPh":"Atau ketik kode reservasi (RSVP-...)","s.checkin":"Check-in",
+  "s.guests":"Daftar Tamu","s.refresh":"↻ Muat Ulang","s.export":"⤓ Ekspor","s.stRsvp":"RSVP","s.stHadir":"Hadir","s.stChecked":"Check-in","s.stPeople":"Orang Hadir","s.fAll":"Semua","s.fNo":"Belum Hadir","s.fIn":"Sudah",
+  "s.listHint":"Tekan \"Muat Ulang\" untuk menampilkan daftar tamu.","s.searchPh":"Cari nama atau kode…","s.rvTitle":"Tinjau Data Tamu","s.rvJml":"Jumlah Hadir","s.rvConfirm":"✓ Konfirmasi Check-in","s.rvEdit":"✎ Edit Jumlah","s.rvCancel":"✕ Batal","s.rvAlready":"Tamu ini sudah check-in.","s.rvNote":"Catatan","s.rvNotePh":"mis. No. meja, rombongan, dll","d.people":"orang","d.edit":"\u270e Edit","d.del":"\ud83d\uddd1 Hapus","d.confirmDel":"Hapus tamu ini dari daftar? Tindakan tercatat di Riwayat.","d.histEmpty":"Belum ada riwayat.","d.rescan":"\ud83d\udcf7 Pindai Lagi","d.listCheckin":"\u2713 Check-in","s.histTitle":"Riwayat","s.histLoad":"\u21bb Muat Riwayat","s.histHint":"Riwayat batal check-in & penghapusan tamu.","s.editTitle":"Edit Data Tamu","s.edName":"Nama","s.edStatus":"Kehadiran","s.edJml":"Jumlah Tamu","s.edNote":"Catatan","s.optHadir":"Hadir","s.optTidak":"Tidak Hadir","s.optBelum":"Belum","s.edSave":"Simpan","s.edDelete":"Hapus Tamu","s.edCancel":"Batal",
+  "s.pinTitle":"Login Panitia","s.pinLabel":"PIN Panitia","s.pinBtn":"Masuk","s.pinWrong":"PIN salah. Coba lagi.","s.pinHint":"Masukkan PIN yang ditetapkan di Apps Script (ADMIN_PIN).",
+  "d.demoBadge":"Mode Demo","d.demoMeta":"Kode terbaca. Hubungkan SHEETS_URL untuk validasi & pencatatan.",
+  "d.failBadge":"Gagal","d.failNm":"Koneksi bermasalah","d.failMeta":"Periksa SHEETS_URL / koneksi internet.",
+  "d.busyB":"Sistem Sibuk","d.busyM":"Banyak check-in bersamaan. Mohon pindai lagi sebentar lagi.",
+  "d.authBadge":"Akses Ditolak","d.authMeta":"PIN panitia salah atau belum dimasukkan.",
+  "d.nfBadge":"Tidak Ditemukan","d.nfMeta":"Kode tidak terdaftar pada daftar RSVP.",
+  "d.alBadge":"Sudah Check-in","d.alMeta":"Tamu ini sudah tercatat hadir sebelumnya.",
+  "d.okBadge":"✓ Check-in Berhasil","d.waSent":"✓ Ucapan terima kasih terkirim otomatis via WhatsApp",
+  "d.thxBtn":"💬 Kirim Ucapan via WhatsApp","d.noWa":"Nomor WhatsApp tamu tidak tersedia — ucapan tidak dapat dikirim.",
+  "d.uncheck":"↩ Batalkan Check-in","d.unchecked":"Check-in Dibatalkan",
+  "d.listDemo":"Mode demo — hubungkan SHEETS_URL untuk melihat daftar tamu.","d.listFail":"Gagal memuat. Periksa SHEETS_URL.","d.listEmpty":"Belum ada data.",
+  "d.pillIn":"✓ Hadir","d.pillNo":"belum",
+  "d.alertLib":"Pustaka pemindai gagal dimuat. Periksa koneksi internet.","d.camErr":"Tidak dapat mengakses kamera: ","d.camUse":"\nGunakan input kode manual di bawah."
+ },
+ en:{
+  "s.kicker":"Guest Check-in","s.sub":"Scan the barcode on the guest's invitation to record attendance.",
+  "s.warn":"⚠️ <b>SHEETS_URL is empty.</b> The page runs in <b>demo mode</b> (shows the code only, nothing saved). Set <code>SHEETS_URL</code> &amp; log in with PIN for full validation.",
+  "s.cam":"Camera Scanner","s.start":"▶ Start Camera","s.stop":"■ Stop",
+  "s.hint":"Camera requires HTTPS & camera permission. Point it at the QR/Code-39 on the invitation.",
+  "s.manualPh":"Or type the reservation code (RSVP-...)","s.checkin":"Check-in",
+  "s.guests":"Guest List","s.refresh":"↻ Refresh","s.export":"⤓ Export","s.stRsvp":"RSVP","s.stHadir":"Attending","s.stChecked":"Checked-in","s.stPeople":"Headcount","s.fAll":"All","s.fNo":"Not Yet","s.fIn":"Checked",
+  "s.listHint":"Tap \"Refresh\" to show the guest list.","s.searchPh":"Search name or code…","s.rvTitle":"Review Guest Details","s.rvJml":"Guests Present","s.rvConfirm":"✓ Confirm Check-in","s.rvEdit":"✎ Edit Count","s.rvCancel":"✕ Cancel","s.rvAlready":"This guest is already checked in.","s.rvNote":"Note","s.rvNotePh":"e.g. table no., group, etc","d.people":"guest(s)","d.edit":"\u270e Edit","d.del":"\ud83d\uddd1 Delete","d.confirmDel":"Remove this guest from the list? This action is logged in History.","d.histEmpty":"No history yet.","d.rescan":"\ud83d\udcf7 Scan Again","d.listCheckin":"\u2713 Check-in","s.histTitle":"History","s.histLoad":"\u21bb Load History","s.histHint":"Log of canceled check-ins & guest deletions.","s.editTitle":"Edit Guest","s.edName":"Name","s.edStatus":"Attendance","s.edJml":"Guest Count","s.edNote":"Note","s.optHadir":"Attending","s.optTidak":"Not Attending","s.optBelum":"Pending","s.edSave":"Save","s.edDelete":"Delete Guest","s.edCancel":"Cancel",
+  "s.pinTitle":"Committee Login","s.pinLabel":"Committee PIN","s.pinBtn":"Enter","s.pinWrong":"Wrong PIN. Try again.","s.pinHint":"Enter the PIN set in Apps Script (ADMIN_PIN).",
+  "d.demoBadge":"Demo Mode","d.demoMeta":"Code read. Connect SHEETS_URL to validate & record.",
+  "d.failBadge":"Failed","d.failNm":"Connection problem","d.failMeta":"Check SHEETS_URL / internet connection.",
+  "d.busyB":"System Busy","d.busyM":"Many simultaneous check-ins. Please scan again in a moment.",
+  "d.authBadge":"Access Denied","d.authMeta":"Committee PIN is wrong or missing.",
+  "d.nfBadge":"Not Found","d.nfMeta":"This code is not in the RSVP list.",
+  "d.alBadge":"Already Checked-in","d.alMeta":"This guest was already recorded as present.",
+  "d.okBadge":"✓ Check-in Successful","d.waSent":"✓ Thank-you message sent automatically via WhatsApp",
+  "d.thxBtn":"💬 Send Thank-you via WhatsApp","d.noWa":"Guest's WhatsApp number is unavailable — message can't be sent.",
+  "d.uncheck":"↩ Undo Check-in","d.unchecked":"Check-in Undone",
+  "d.listDemo":"Demo mode — connect SHEETS_URL to view the guest list.","d.listFail":"Failed to load. Check SHEETS_URL.","d.listEmpty":"No data.",
+  "d.pillIn":"✓ Present","d.pillNo":"not yet",
+  "d.alertLib":"Scanner library failed to load. Check your internet connection.","d.camErr":"Cannot access camera: ","d.camUse":"\nUse manual code entry below."
+ }
+};
+var scanLang='id';
+function st(k){ return (SI18N[scanLang]&&SI18N[scanLang][k]!=null)?SI18N[scanLang][k]:k; }
+var listShown=false, allRows=[], statusFilter='all';
+function applyScanLang(l){
+  scanLang=l; document.documentElement.lang=l;
+  document.querySelectorAll('[data-i18n]').forEach(function(e){var k=e.getAttribute('data-i18n');if(SI18N[l][k]!=null)e.textContent=SI18N[l][k];});
+  document.querySelectorAll('[data-i18n-ph]').forEach(function(e){var k=e.getAttribute('data-i18n-ph');if(SI18N[l][k]!=null)e.placeholder=SI18N[l][k];});
+  document.querySelectorAll('[data-i18n-html]').forEach(function(e){var k=e.getAttribute('data-i18n-html');if(SI18N[l][k]!=null)e.innerHTML=SI18N[l][k];});
+  document.querySelectorAll('.lang button').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-lang')===l);});
+  if(listShown) applyFilter();
+}
+document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){applyScanLang(b.getAttribute('data-lang'));});});
+
+/* ===== AUDIO (beep) ===== */
+var actx=null;
+function initAudio(){ try{ if(!actx) actx=new (window.AudioContext||window.webkitAudioContext)(); if(actx.state==='suspended') actx.resume(); }catch(e){} }
+function tone(freq,start,dur,vol){ if(!actx)return; var o=actx.createOscillator(),g=actx.createGain(); o.type='sine'; o.frequency.value=freq; o.connect(g); g.connect(actx.destination); g.gain.setValueAtTime(vol||0.09,actx.currentTime+start); o.start(actx.currentTime+start); o.stop(actx.currentTime+start+dur); }
+function playBeep(type){ if(!actx)return; if(type==='ok'){ tone(880,0,0.12); tone(1320,0.12,0.15); } else if(type==='warn'){ tone(620,0,0.2); } else { tone(200,0,0.32,0.12); } }
+
+/* ===== JSONP (pin disertakan otomatis) ===== */
+function jsonp(params, cb){
+  if(!SHEETS_URL){ cb({ ok:false, demo:true }); return; }
+  var fn='cb_'+Date.now()+Math.floor(Math.random()*1000);
+  var s=document.createElement('script'); var done=false;
+  var to=setTimeout(function(){ if(done)return; done=true; try{cb({ ok:false, error:'timeout' });}finally{ delete window[fn]; if(s.parentNode)s.parentNode.removeChild(s); } }, 15000);
+  window[fn]=function(data){ if(done)return; done=true; clearTimeout(to); try{cb(data);}finally{ delete window[fn]; if(s.parentNode)s.parentNode.removeChild(s); } };
+  s.onerror=function(){ if(done)return; done=true; clearTimeout(to); cb({ ok:false, error:'network' }); delete window[fn]; if(s.parentNode)s.parentNode.removeChild(s); };
+  s.src=SHEETS_URL+'?'+params+(PIN?('&pin='+encodeURIComponent(PIN)):'')+'&callback='+fn;
+  document.body.appendChild(s);
+}
+
+/* ===== HELPERS ===== */
+function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+function normNum(n){ n=String(n==null?'':n).replace(/[^0-9]/g,''); if(!n)return ''; if(n.charAt(0)==='0')n='62'+n.substring(1); else if(n.substring(0,2)!=='62'&&n.charAt(0)==='8')n='62'+n; return n; }
+function buildThanks(nama,lang){ if(lang==='en'){ return 'Hello '+(nama||'')+', thank you for attending and sharing in the joy of the wedding of Taufiqulhadi & Yolla Yulia Putri. Your presence and prayers mean so much to us. Warm regards, #TaufiqPutriMelabuh'; } return 'Halo '+(nama||'')+', terima kasih telah hadir dan berbagi kebahagiaan di pernikahan Taufiqulhadi & Yolla Yulia Putri. Kehadiran serta doa restu Anda sangat berarti bagi kami. Salam hangat, #TaufiqPutriMelabuh'; }
+function flash(){ var f=document.getElementById('flash'); f.classList.add('flash'); setTimeout(function(){f.classList.remove('flash');},180); }
+
+/* ===== RESULT ===== */
+function showResult(code, d){
+  var el=document.getElementById('result'); el.className='result show'; var rvp=document.getElementById('review'); if(rvp)rvp.className='result';
+  showCam(false);
+  if(d && d.demo){
+    el.classList.add('r-warn'); playBeep('warn');
+    el.innerHTML='<div class="badge">'+st('d.demoBadge')+'</div><div class="nm">'+esc(code)+'</div><div class="meta">'+st('d.demoMeta')+'</div>';
+  } else if(d && d.error==='auth'){
+    el.classList.add('r-bad'); playBeep('bad');
+    el.innerHTML='<div class="badge">'+st('d.authBadge')+'</div><div class="nm">'+esc(code)+'</div><div class="meta">'+st('d.authMeta')+'</div>';
+  } else if(d && d.error==='busy'){
+    el.classList.add('r-warn'); playBeep('warn');
+    el.innerHTML='<div class="badge">'+st('d.busyB')+'</div><div class="nm">'+esc(code)+'</div><div class="meta">'+st('d.busyM')+'</div>';
+  } else if(!d || !d.ok){
+    el.classList.add('r-bad'); playBeep('bad');
+    el.innerHTML='<div class="badge">'+st('d.failBadge')+'</div><div class="nm">'+st('d.failNm')+'</div><div class="meta">'+st('d.failMeta')+'</div>';
+  } else if(!d.found){
+    el.classList.add('r-bad'); playBeep('bad');
+    el.innerHTML='<div class="badge">'+st('d.nfBadge')+'</div><div class="nm">'+esc(code)+'</div><div class="meta">'+st('d.nfMeta')+'</div>';
+  } else if(d.already){
+    el.classList.add('r-warn'); playBeep('warn');
+    el.innerHTML='<div class="badge">'+st('d.alBadge')+'</div><div class="nm">'+esc(d.nama)+'</div><div class="meta">'+esc(d.status)+' · '+pplTxt(d.jumlah)+'</div><div class="code">'+esc(code)+'</div>'+(d&&d.note?('<div class="meta">✎ '+esc(d.note)+'</div>'):'')+'<div class="meta">'+st('d.alMeta')+'</div><div class="row" style="justify-content:center;margin-top:12px"><button class="btn ghost" id="undoBtn" type="button">'+st('d.uncheck')+'</button></div>';
+    wireUndo(code);
+  } else {
+    el.classList.add('r-ok'); flash(); playBeep('ok');
+    var waNum=normNum(d.wa), extra='';
+    if(d.waSent){ extra='<div class="meta" style="color:#147a3b;font-weight:600">'+st('d.waSent')+'</div>'; }
+    else if(waNum){ extra='<div class="row" style="justify-content:center;margin-top:12px"><a class="btn wa" id="thxBtn" target="_blank" rel="noopener">'+st('d.thxBtn')+'</a></div>'; }
+    else { extra='<div class="meta">'+st('d.noWa')+'</div>'; }
+    extra+='<div class="row" style="justify-content:center;margin-top:10px"><button class="btn ghost" id="undoBtn" type="button">'+st('d.uncheck')+'</button></div>';
+    el.innerHTML='<div class="badge">'+st('d.okBadge')+'</div><div class="nm">'+esc(d.nama)+'</div><div class="meta">'+esc(d.status)+' · '+pplTxt(d.jumlah)+'</div><div class="code">'+esc(code)+'</div>'+(d&&d.note?('<div class="meta">✎ '+esc(d.note)+'</div>'):'')+extra;
+    if(!d.waSent && waNum){
+      var link='https://wa.me/'+waNum+'?text='+encodeURIComponent(buildThanks(d.nama,d.lang));
+      var b=document.getElementById('thxBtn'); if(b)b.href=link;
+      try{ window.open(link,'_blank'); }catch(e){}
+    }
+    wireUndo(code);
+  }
+  var rdiv=document.createElement('div'); rdiv.className='row'; rdiv.style.justifyContent='center'; rdiv.style.marginTop='10px';
+  var rbtn=document.createElement('button'); rbtn.className='btn'; rbtn.type='button'; rbtn.textContent=st('d.rescan'); rbtn.onclick=resumeScan;
+  rdiv.appendChild(rbtn); el.appendChild(rdiv);
+  el.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+function wireUndo(code){ var u=document.getElementById('undoBtn'); if(u)u.onclick=function(){ doUncheck(code); }; }
+
+function doCheckin(code, jumlah, note){ code=(code||'').trim().toUpperCase(); if(!code)return;
+  if(!SHEETS_URL){ showResult(code,{demo:true}); return; }
+  var p='action=checkin&code='+encodeURIComponent(code);
+  var jn=parseInt(String(jumlah==null?'':jumlah).replace(/[^0-9]/g,''),10);
+  if(!isNaN(jn)) p+='&jumlah='+jn;
+  p+='&catatan='+encodeURIComponent(note==null?'':note);
+  jsonp(p, function(d){ showResult(code,d); loadList(); });
+}
+function doUncheck(code){ code=(code||'').trim().toUpperCase(); if(!code||!SHEETS_URL)return;
+  jsonp('action=uncheck&code='+encodeURIComponent(code), function(d){
+    var el=document.getElementById('result'); el.className='result show r-warn'; playBeep('warn');
+    el.innerHTML='<div class="badge">'+st('d.unchecked')+'</div><div class="nm">'+esc((d&&d.nama)||code)+'</div><div class="code">'+esc(code)+'</div>'+(d&&d.note?('<div class="meta">✎ '+esc(d.note)+'</div>'):'');
+    var rdiv=document.createElement('div'); rdiv.className='row'; rdiv.style.justifyContent='center'; rdiv.style.marginTop='10px';
+    var rbtn=document.createElement('button'); rbtn.className='btn'; rbtn.type='button'; rbtn.textContent=st('d.rescan'); rbtn.onclick=resumeScan;
+    rdiv.appendChild(rbtn); el.appendChild(rdiv);
+    loadList();
+  });
+}
+
+/* ===== TINJAU SEBELUM CHECK-IN ===== */
+var rvCurrentCode='';
+function reviewCode(code){ code=(code||'').trim().toUpperCase(); if(!code)return; var rvp=document.getElementById('review'); if(rvp)rvp.className='result';
+  if(!SHEETS_URL){ showResult(code,{demo:true}); return; }
+  jsonp('action=lookup&code='+encodeURIComponent(code), function(d){
+    if(!d||!d.ok||!d.found){ showResult(code,d||{}); return; }
+    showReview(code,d);
+  });
+}
+function showReview(code,d){
+  rvCurrentCode=code;
+  document.getElementById('rvName').textContent=d.nama||code;
+  document.getElementById('rvStatus').textContent=(d.status||'')+(d.lang?(' · '+String(d.lang).toUpperCase()):'');
+  document.getElementById('rvCode').textContent=code;
+  var ji=document.getElementById('rvJumlah'); ji.value=(d.jumlah==null?'':String(d.jumlah)); ji.setAttribute('readonly','');
+  document.getElementById('rvNote').value=(d.note==null?'':String(d.note));
+  var al=document.getElementById('rvAlready'); if(d.already){ al.textContent=st('s.rvAlready'); al.style.display='block'; } else { al.style.display='none'; }
+  document.getElementById('result').className='result';
+  var rv=document.getElementById('review'); rv.className='result show'; rv.scrollIntoView({behavior:'smooth',block:'nearest'});
+  playBeep('warn');
+}
+document.getElementById('rvEdit').addEventListener('click',function(){ var ji=document.getElementById('rvJumlah'); ji.removeAttribute('readonly'); ji.focus(); try{ji.select();}catch(e){} });
+document.getElementById('rvConfirm').addEventListener('click',function(){ var j=document.getElementById('rvJumlah').value.trim(); var nt=document.getElementById('rvNote').value.trim(); document.getElementById('review').className='result'; doCheckin(rvCurrentCode, j, nt); });
+document.getElementById('rvCancel').addEventListener('click',function(){ document.getElementById('review').className='result'; resumeScan(); });
+
+/* ===== MANUAL ===== */
+document.getElementById('manualBtn').addEventListener('click', function(){ initAudio(); var c=document.getElementById('manualCode').value; reviewCode(c); document.getElementById('manualCode').value=''; });
+document.getElementById('manualCode').addEventListener('keydown', function(e){ if(e.key==='Enter'){ initAudio(); reviewCode(this.value); this.value=''; } });
+document.getElementById('manualCode').addEventListener('input', function(){ var p=this.selectionStart; this.value=this.value.toUpperCase(); try{this.setSelectionRange(p,p);}catch(e){} });
+
+/* ===== CAMERA ===== */
+var html5Qr=null, scanning=false, lastCode='', lastTime=0;
+function stopCamera(){
+  if(html5Qr && scanning){ try{ html5Qr.stop().then(function(){ try{html5Qr.clear();}catch(e){} }); }catch(e){} }
+  scanning=false;
+  document.getElementById('startBtn').style.display='block';
+  document.getElementById('stopBtn').style.display='none';
+}
+function onScan(text){ var now=Date.now(); if(text===lastCode && now-lastTime<2500)return; lastCode=text; lastTime=now; stopCamera(); showCam(false); reviewCode(text); }
+function startCamera(){
+  initAudio();
+  if(typeof Html5Qrcode==='undefined'){ alert(st('d.alertLib')); return; }
+  if(scanning)return;
+  html5Qr=new Html5Qrcode("reader");
+  var cfg={ fps:10, qrbox:{width:250,height:250}, experimentalFeatures:{ useBarCodeDetectorIfSupported:true } };
+  try{ cfg.formatsToSupport=[Html5QrcodeSupportedFormats.QR_CODE, Html5QrcodeSupportedFormats.CODE_39]; }catch(e){}
+  html5Qr.start({facingMode:"environment"}, cfg, onScan, function(){})
+    .then(function(){ scanning=true; document.getElementById('startBtn').style.display='none'; document.getElementById('stopBtn').style.display='block'; })
+    .catch(function(err){ alert(st('d.camErr')+err+st('d.camUse')); });
+}
+function showCam(show){ var c=document.getElementById('camCard'); if(c) c.style.display = show?'':'none'; }
+function resumeScan(){
+  var rv=document.getElementById('review'); if(rv) rv.className='result';
+  var rs=document.getElementById('result'); if(rs) rs.className='result';
+  lastCode='';
+  showCam(true);
+  startCamera();
+  var c=document.getElementById('camCard'); if(c) c.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+document.getElementById('startBtn').addEventListener('click', startCamera);
+document.getElementById('stopBtn').addEventListener('click', stopCamera);
+
+/* ===== DAFTAR TAMU + PENCARIAN ===== */
+function renderListData(d){
+  document.getElementById('stTotal').textContent=d.total;
+  document.getElementById('stHadir').textContent=d.hadir;
+  document.getElementById('stChecked').textContent=d.checked;
+  allRows=(d.rows||[]).slice().reverse();
+  var ppl=0; allRows.forEach(function(r){ if(r.checkin) ppl+=(parseNum(r.jumlah)||1); });
+  var sp=document.getElementById('stPeople'); if(sp) sp.textContent=ppl;
+  applyFilter();
+}
+function parseNum(x){ var m=String(x==null?'':x).match(/\d+/); return m?parseInt(m[0],10):0; }
+function applyFilter(){
+  var q=(document.getElementById('search').value||'').toLowerCase().trim();
+  var rows=allRows.filter(function(r){
+    if(statusFilter==='no' && r.checkin) return false;
+    if(statusFilter==='in' && !r.checkin) return false;
+    return !q || String(r.nama).toLowerCase().indexOf(q)>=0 || String(r.kode).toLowerCase().indexOf(q)>=0;
+  });
+  if(!rows.length){ document.getElementById('guestList').innerHTML='<div class="hint">'+st('d.listEmpty')+'</div>'; return; }
+  document.getElementById('guestList').innerHTML=rows.map(function(r){
+    var inn=r.checkin?'<span class="pill in">'+st('d.pillIn')+'</span>':'<span class="pill no">'+st('d.pillNo')+'</span>';
+    var note=r.note?'<div class="gnote">\u270e '+esc(r.note)+'</div>':'';
+    var ci=r.checkin?'':'<button type="button" class="gcheck" data-code="'+esc(r.kode)+'">'+st('d.listCheckin')+'</button>';
+    return '<div class="guest"><div style="flex:1"><div class="gn">'+esc(r.nama)+'</div><div class="gc">'+esc(r.kode)+' · '+pplTxt(r.jumlah)+'</div>'+note+'<div class="gact">'+ci+'<button type="button" class="gedit" data-code="'+esc(r.kode)+'">'+st('d.edit')+'</button><button type="button" class="gdel" data-code="'+esc(r.kode)+'">'+st('d.del')+'</button></div></div>'+inn+'</div>';
+  }).join('');
+}
+function pplTxt(j){ var n=parseNum(j); return n+' '+st('d.people'); }
+
+/* ===== EDIT / HAPUS / RIWAYAT ===== */
+var edCode='';
+function openEdit(code){
+  var r=null; for(var i=0;i<allRows.length;i++){ if(String(allRows[i].kode)===String(code)){ r=allRows[i]; break; } }
+  if(!r) return;
+  edCode=code;
+  document.getElementById('edName').value=r.nama||'';
+  var sv=String(r.status||'').toLowerCase(), ss=document.getElementById('edStatus');
+  ss.value = (sv.indexOf('tidak')>=0||sv.indexOf('not')>=0) ? 'Tidak Hadir' : ((sv.indexOf('hadir')>=0||sv.indexOf('attend')>=0) ? 'Hadir' : 'Belum');
+  document.getElementById('edJml').value=parseNum(r.jumlah)||'';
+  document.getElementById('edNote').value=r.note||'';
+  document.getElementById('editModal').style.display='flex';
+}
+function closeEdit(){ document.getElementById('editModal').style.display='none'; edCode=''; }
+document.getElementById('edCancel').addEventListener('click', closeEdit);
+document.getElementById('edSave').addEventListener('click', function(){
+  if(!edCode||!SHEETS_URL){ closeEdit(); return; }
+  var p='action=edit&code='+encodeURIComponent(edCode)
+    +'&nama='+encodeURIComponent(document.getElementById('edName').value.trim())
+    +'&status='+encodeURIComponent(document.getElementById('edStatus').value)
+    +'&jumlah='+encodeURIComponent(document.getElementById('edJml').value.trim())
+    +'&catatan='+encodeURIComponent(document.getElementById('edNote').value.trim());
+  jsonp(p, function(d){ closeEdit(); loadList(); });
+});
+document.getElementById('edDelete').addEventListener('click', function(){
+  if(!edCode||!SHEETS_URL){ closeEdit(); return; }
+  if(!confirm(st('d.confirmDel'))) return;
+  jsonp('action=delete&code='+encodeURIComponent(edCode), function(d){ closeEdit(); loadList(); });
+});
+document.getElementById('guestList').addEventListener('click', function(e){
+  var b=(e.target.closest)?e.target.closest('button'):null; if(!b)return;
+  var code=b.getAttribute('data-code'); if(!code)return;
+  if(b.classList.contains('gcheck')){ try{stopCamera();}catch(e){} showCam(false); reviewCode(code); window.scrollTo({top:0,behavior:'smooth'}); return; }
+  if(b.classList.contains('gedit')) openEdit(code);
+  else if(b.classList.contains('gdel')){ if(confirm(st('d.confirmDel'))){ if(SHEETS_URL) jsonp('action=delete&code='+encodeURIComponent(code), function(d){ loadList(); }); } }
+});
+function loadHistory(){
+  if(!SHEETS_URL){ document.getElementById('histList').innerHTML='<div class="hint">'+st('d.listDemo')+'</div>'; return; }
+  jsonp('action=history', function(d){
+    if(!d||!d.ok){ document.getElementById('histList').innerHTML='<div class="hint">'+st('d.listFail')+'</div>'; return; }
+    var rows=d.rows||[];
+    if(!rows.length){ document.getElementById('histList').innerHTML='<div class="hint">'+st('d.histEmpty')+'</div>'; return; }
+    document.getElementById('histList').innerHTML=rows.map(function(r){
+      return '<div class="histrow"><div><span class="ha">'+esc(r.aksi)+'</span> · '+esc(r.nama||r.kode)+(r.detail?(' <span style="color:#888">('+esc(r.detail)+')</span>'):'')+'</div><div class="ht">'+esc(r.waktu)+'</div></div>';
+    }).join('');
+  });
+}
+document.getElementById('histBtn').addEventListener('click', loadHistory);
+
+function loadList(){
+  listShown=true;
+  jsonp('action=list', function(d){
+    if(d && d.demo){ document.getElementById('guestList').innerHTML='<div class="hint">'+st('d.listDemo')+'</div>'; return; }
+    if(d && d.error==='auth'){ document.getElementById('guestList').innerHTML='<div class="hint">'+st('d.authMeta')+'</div>'; return; }
+    if(!d || !d.ok){ document.getElementById('guestList').innerHTML='<div class="hint">'+st('d.listFail')+'</div>'; return; }
+    renderListData(d);
+  });
+}
+document.getElementById('refreshBtn').addEventListener('click', loadList);
+document.getElementById('search').addEventListener('input', function(){ if(listShown) applyFilter(); });
+var _fb=document.querySelectorAll('.fbtn');
+[].forEach.call(_fb,function(b){ b.addEventListener('click',function(){ statusFilter=b.getAttribute('data-filter'); [].forEach.call(_fb,function(x){x.classList.toggle('on',x===b);}); if(listShown) applyFilter(); }); });
+function exportCSV(){
+  if(!allRows.length) return;
+  function q(v){ v=String(v==null?'':v); return '"'+v.replace(/"/g,'""')+'"'; }
+  var head=['Kode','Nama','Kehadiran','JumlahTamu','CheckIn','Catatan'];
+  var lines=[head.map(q).join(',')];
+  allRows.forEach(function(r){ lines.push([r.kode,r.nama,r.status,r.jumlah,(r.checkin?'Hadir':'Belum'),(r.note||'')].map(q).join(',')); });
+  var csv='\ufeff'+lines.join('\r\n');
+  var blob=new Blob([csv],{type:'text/csv;charset=utf-8;'});
+  var d=new Date(); function p(n){return String(n).padStart(2,'0');}
+  var fn='checkin-'+d.getFullYear()+p(d.getMonth()+1)+p(d.getDate())+'-'+p(d.getHours())+p(d.getMinutes())+'.csv';
+  var a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=fn; document.body.appendChild(a); a.click();
+  setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); },1000);
+}
+document.getElementById('exportBtn').addEventListener('click', exportCSV);
+
+/* ===== LOGIN PANITIA ===== */
+function enterApp(){ document.getElementById('login').style.display='none'; document.getElementById('app').style.display='block'; showCam(true); }
+document.getElementById('pinBtn').addEventListener('click', function(){
+  initAudio();
+  PIN=document.getElementById('pinInput').value.trim();
+  document.getElementById('pinMsg').textContent='…';
+  jsonp('action=list', function(d){
+    if(d && d.error==='auth'){ PIN=''; document.getElementById('pinMsg').textContent=st('s.pinWrong'); playBeep('bad'); return; }
+    if(!d || !d.ok){ document.getElementById('pinMsg').textContent=st('d.failMeta'); return; }
+    document.getElementById('cfgWarn').style.display='none';
+    enterApp(); renderListData(d);
+  });
+});
+document.getElementById('pinInput').addEventListener('keydown', function(e){ if(e.key==='Enter') document.getElementById('pinBtn').click(); });
+
+/* ===== INIT ===== */
+applyScanLang('id');
+if(SHEETS_URL){ document.getElementById('login').style.display='block'; }
+else { document.getElementById('app').style.display='block'; document.getElementById('cfgWarn').style.display='block'; }
+</script>
+</body>
+</html>
