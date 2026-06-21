@@ -415,14 +415,14 @@ footer .cp{font-size:12px;color:rgba(255,255,255,.6);margin-top:14px}
     <div class="gcard bank">
       <div class="gi"><svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#6E1423" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 4l9 5.5"/><path d="M5 9.5v9M9.5 9.5v9M14.5 9.5v9M19 9.5v9"/><path d="M2.5 20.5h19"/></svg></div>
       <h3 data-i18n="g.bankT">Transfer Bank</h3>
-      <div class="val"><b>Bank Mandiri</b><br><span class="big" id="giftRekM" style="display:none">1090022253447</span><span id="rekMaskM" class="muted" style="letter-spacing:2px">•••• •••• •••• ••••</span><br><span data-i18n="g.anM">a.n. Taufiqulhadi</span></div>
+      <div class="val"><b>Bank BCA</b><br><span class="big" id="giftRekM" style="display:none">82105477950</span><span id="rekMaskM" class="muted" style="letter-spacing:2px">•••• •••• •••• ••••</span><br><span data-i18n="g.anM">a.n. Taufiqulhadi</span></div>
       <button class="btn ghost" id="showRekM" data-i18n="g.showRek">Tampilkan No. Rekening</button>
       <button class="btn ghost" id="copyRekM" data-i18n="g.copyRek" style="display:none">Salin No. Rekening</button>
     </div>
     <div class="gcard bank">
       <div class="gi"><svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#6E1423" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 4l9 5.5"/><path d="M5 9.5v9M9.5 9.5v9M14.5 9.5v9M19 9.5v9"/><path d="M2.5 20.5h19"/></svg></div>
       <h3 data-i18n="g.bankT">Transfer Bank</h3>
-      <div class="val"><b>Bank BCA</b><br><span class="big" id="giftRekB" style="display:none">82105477950</span><span id="rekMaskB" class="muted" style="letter-spacing:2px">•••• •••• •••• ••••</span><br><span data-i18n="g.anB">a.n. Taufiqulhadi</span></div>
+      <div class="val"><b>Bank Mandiri</b><br><span class="big" id="giftRekB" style="display:none">1090022253447</span><span id="rekMaskB" class="muted" style="letter-spacing:2px">•••• •••• •••• ••••</span><br><span data-i18n="g.anB">a.n. Taufiqulhadi</span></div>
       <button class="btn ghost" id="showRekB" data-i18n="g.showRek">Tampilkan No. Rekening</button>
       <button class="btn ghost" id="copyRekB" data-i18n="g.copyRek" style="display:none">Salin No. Rekening</button>
     </div>
@@ -525,7 +525,8 @@ footer .cp{font-size:12px;color:rgba(255,255,255,.6);margin-top:14px}
 <script>
 /* ===== KONFIGURASI ===== */
 var HOST_WA="6282173236422";                 // nomor WhatsApp tuan rumah
-var REK_MANDIRI="1090022253447";var REK_BCA="82105477950";               // nomor rekening Bank Mandiri
+var REK_BCA="82105477950";                   // nomor rekening BCA
+var REK_MANDIRI="1090022253447";             // nomor rekening Bank Mandiri
 var LOVE_VIDEO="";                           // URL video Love Story (YouTube embed/Reel/MP4)
 var MUSIC_URL="https://taufiqulhadi.github.io/undangan/Nusantara%20Wedding%20Union.mp3";  // URL musik latar (mp3) — kosong = tombol musik disembunyikan
 var SHEETS_URL="https://script.google.com/macros/s/AKfycbyvuJq_QdIst8jG1l86m8OH9JF-OyY7RVWDtHungYPO1s6mJ-aHlO-2x_uJpahU-qxO/exec";   // URL Web App Google Apps Script (.../exec) untuk simpan RSVP
@@ -630,11 +631,11 @@ document.getElementById('lovePoster').addEventListener('click',function(){
 /* ===== COPY (gift) ===== */
 function toast(msg){var t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(t._tm);t._tm=setTimeout(function(){t.classList.remove('show');},1600);}
 function copyText(txt){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(function(){toast(I18N[curLang]['copied']);},function(){toast(txt);});}else{toast(txt);}}
-document.getElementById('giftRekM').textContent=REK_MANDIRI;
-document.getElementById('giftRekB').textContent=REK_BCA;
+document.getElementById('giftRekM').textContent=REK_BCA;
+document.getElementById('giftRekB').textContent=REK_MANDIRI;
 document.getElementById('copyAddr').addEventListener('click',function(){copyText(document.getElementById('giftAddr').textContent);});
-document.getElementById('copyRekM').addEventListener('click',function(){copyText(REK_MANDIRI);});
-document.getElementById('copyRekB').addEventListener('click',function(){copyText(REK_BCA);});
+document.getElementById('copyRekM').addEventListener('click',function(){copyText(REK_BCA);});
+document.getElementById('copyRekB').addEventListener('click',function(){copyText(REK_MANDIRI);});
 function revealGift(valId,maskId,showId,copyId){var v=document.getElementById(valId),m=document.getElementById(maskId),sh=document.getElementById(showId),cp=document.getElementById(copyId);if(v)v.style.display='';if(m)m.style.display='none';if(sh)sh.style.display='none';if(cp)cp.style.display='';}
 document.getElementById('showAddr').addEventListener('click',function(){revealGift('giftAddr','addrMask','showAddr','copyAddr');});
 document.getElementById('showRekM').addEventListener('click',function(){revealGift('giftRekM','rekMaskM','showRekM','copyRekM');});
