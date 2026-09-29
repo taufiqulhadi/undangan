@@ -653,22 +653,21 @@ var VENUE="Gedung Serbaguna SMKN 2 Padang, Jl. dr. Sutomo No. 5, Simpang Haru, P
 var MAX_GUESTS=5;            // jumlah tamu maksimal pada pilihan RSVP
 /* Galeri. Tiap foto boleh berupa teks path saja, atau objek dengan teks alt per bahasa:
    var PHOTOS=[
-     {src:"foto/saling-menatap.webp", alt:"Di antara banyak hal yang ingin kukatakan, senyumku selalu lebih dulu menjawab.", alt_en:"Of all the things I want to tell you, my smile always speaks first."},
-     "foto/bersama-di-taman.webp"   // tanpa alt khusus: memakai teks alt bawaan bernomor
-     "foto/senja-bersama.webp"   // tanpa alt khusus: memakai teks alt bawaan bernomor
+     {src:"foto/01.webp", alt:"Kami berdua di tepi pantai Batam saat senja", alt_en:"The two of us on a Batam beach at sunset"},
+     "foto/02.webp"   // tanpa alt khusus: memakai teks alt bawaan bernomor
    ];
-   Urutan di array = urutan tampil di galeri dan lightbox. 
-*/
-var PHOTOS=[ 
+   Urutan di array = urutan tampil di galeri dan lightbox. */
+var PHOTOS=[
   {src:"foto/saling-menatap.webp", alt:"Di antara banyak hal yang ingin kukatakan, senyumku selalu lebih dulu menjawab.", alt_en:"Of all the things I want to tell you, my smile always speaks first."},
   {src:"foto/bersama-di-taman.webp", alt:"Merayakan kita—dengan tawa lepas dan dua tangan yang menyapa dunia.", alt_en:"Here’s to us—to carefree laughter and greeting the world with open arms."},
   {src:"foto/senja-bersama.webp", alt:"Hari boleh beranjak petang. Aku masih ingin duduk di sini, tertawa bersamamu.", alt_en:"Let the daylight fade. I’d still choose to sit here, laughing with you."},
+  // Tiga foto adat: dua insan bersiap masing-masing, lalu bertemu dalam satu bingkai
   {src:"foto/taufiq-adat.webp", alt:"Dengan niat yang baik dan hati yang mantap, aku bersiap berjalan bersamamu.", alt_en:"With a sincere heart and a steady promise, I’m ready to walk beside you."},
-  {src:"foto/pasangan-adat.webp", alt:"Berakar pada tradisi, bertumbuh dalam cinta. Bersamamu, aku menemukan tempat pulang.", alt_en:"Rooted in tradition, growing in love. With you, I’ve found my way home."},
-  {src:"foto/putri-adat.webp", alt:"Dalam balutan adat dan doa keluarga, satu langkah lebih dekat menuju kisah kita.", alt_en:"Wrapped in tradition and our families’ prayers, one step closer to our forever."}       
-          ];
-var PHOTO_COUPLE="pasangan-adat.webp";         // URL foto untuk kartu "Mempelai" (opsional)
-var PHOTO_WALIMAH="pasangan-putih.webp";        // URL foto untuk kartu "Walimatul 'Urusy" (opsional)
+  {src:"foto/putri-adat.webp", alt:"Dalam balutan adat dan doa keluarga, satu langkah lebih dekat menuju kisah kita.", alt_en:"Wrapped in tradition and our families’ prayers, one step closer to our forever."},
+  {src:"foto/pasangan-adat.webp", alt:"Berakar pada tradisi, bertumbuh dalam cinta. Bersamamu, aku menemukan tempat pulang.", alt_en:"Rooted in tradition, growing in love. With you, I’ve found my way home."}
+];
+var PHOTO_COUPLE="foto/pasangan-adat.webp";    // foto latar kartu "Mempelai" (opsional)
+var PHOTO_WALIMAH="foto/pasangan-putih.webp";  // foto latar kartu "Walimatul 'Urusy" (opsional)
 
 /* ===== I18N ===== */
 var I18N={
