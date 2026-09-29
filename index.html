@@ -326,9 +326,25 @@ fieldset.field{border:0;min-width:0}fieldset.field legend{font-size:13px;font-we
 .dgrid3::before{content:"";position:absolute;left:8%;right:8%;top:38px;border-top:1.5px dashed rgba(196,154,47,.55);pointer-events:none}
 @media(max-width:760px){.dgrid3{grid-template-columns:1fr}.dgrid3::before{display:none}}
 .dk{position:relative;border-radius:22px;padding:26px 24px 24px;color:var(--gading);overflow:hidden;display:flex;flex-direction:column;gap:10px;min-height:250px}
-.dk.jw{background:linear-gradient(165deg,#7d1e30,#5C1020)}
-.dk.mn{background:linear-gradient(165deg,#247a61,#17513f)}
-.dk.ac{background:linear-gradient(165deg,#2c4866,#1b2e42)}
+.dk.jw{background:linear-gradient(165deg,#2c4866,#1b2e42)}   /* Jawa: navy */
+.dk.mn{background:linear-gradient(165deg,#7d1e30,#5C1020)}   /* Minangkabau: marun */
+.dk.ac{background:linear-gradient(165deg,#247a61,#17513f)}   /* Aceh: emerald */
+/* Efek hover: kartu terangkat, bingkai emas muncul, dan pin "berlabuh" dengan riak air */
+.dk{transition:transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .4s}
+.dk::after{content:"";position:absolute;inset:8px;border:1.5px solid rgba(231,196,90,0);border-radius:16px;pointer-events:none;transition:border-color .4s}
+.dk .pin{transition:background .35s}
+.dk h3{transition:letter-spacing .4s}
+@keyframes dkRipple{0%{box-shadow:0 0 0 4px rgba(251,247,239,.18),0 0 0 0 rgba(231,196,90,.55)}100%{box-shadow:0 0 0 4px rgba(251,247,239,.18),0 0 0 18px rgba(231,196,90,0)}}
+@media(hover:hover){
+ .dk:hover{transform:translateY(-8px);box-shadow:0 26px 54px rgba(0,0,0,.24)}
+ .dk:hover::after{border-color:rgba(231,196,90,.75)}
+ .dk:hover .pin{background:var(--emasl);animation:dkRipple 1.6s ease-out infinite}
+ .dk:hover h3{letter-spacing:.02em}
+}
+/* layar sentuh: efek muncul selama kartu disentuh */
+.dk:active{transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,0,0,.2)}
+.dk:active::after{border-color:rgba(231,196,90,.75)}
+.dk:active .pin{background:var(--emasl)}
 .dk .pin{width:26px;height:26px;border-radius:50%;background:var(--gading);border:5px solid var(--emasl);box-shadow:0 0 0 4px rgba(251,247,239,.18)}
 .dk .when{font-size:13px;color:var(--emasl);font-weight:600;letter-spacing:.04em}
 .dk h3{font-size:28px;color:#fff}
