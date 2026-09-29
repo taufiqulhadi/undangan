@@ -338,6 +338,7 @@ fieldset.field{border:0;min-width:0}fieldset.field legend{font-size:13px;font-we
 .acc .ad .cnote{padding-top:0;font-style:italic;color:var(--zamrud);font-size:13.5px}
 .acc.pray .time{color:var(--zamrud)}
 .ru-note{font-size:12.5px;color:var(--soft);margin-top:10px}
+.gal-note{max-width:520px;margin:-14px auto 28px;text-align:center;color:var(--soft);font-size:14px;font-style:italic;line-height:1.65}
 </style>
 </head>
 <body>
@@ -449,6 +450,7 @@ fieldset.field{border:0;min-width:0}fieldset.field legend{font-size:13px;font-we
 <!-- GALERI -->
 <section id="galeri" style="padding:64px 0"><div class="wrap">
   <div class="shead"><span class="kicker c" data-i18n="g2.kicker">Galeri</span><h2 data-i18n="g2.h2">Momen Kami</h2></div>
+  <p class="gal-note" data-i18n="g2.note">Momen ini kami bagikan untuk menemani kebahagiaan bersama. Mohon tidak menyebarluaskan foto tanpa izin kami.</p>
   <div class="gallery-grid" id="gallery"></div>
 </div></section>
 
@@ -655,10 +657,15 @@ var MAX_GUESTS=5;            // jumlah tamu maksimal pada pilihan RSVP
      "foto/bersama-di-taman.webp"   // tanpa alt khusus: memakai teks alt bawaan bernomor
      "foto/senja-bersama.webp"   // tanpa alt khusus: memakai teks alt bawaan bernomor
    ];
-   Urutan di array = urutan tampil di galeri dan lightbox. */
-var PHOTOS=[ {src:"foto/saling-menatap.webp", alt:"Di antara banyak hal yang ingin kukatakan, senyumku selalu lebih dulu menjawab.", alt_en:"Of all the things I want to tell you, my smile always speaks first."},
-     {src:"foto/bersama-di-taman.webp", alt:"Merayakan kita—dengan tawa lepas dan dua tangan yang menyapa dunia.", alt_en:"Here’s to us—to carefree laughter and greeting the world with open arms."},
-     {src:"foto/senja-bersama.webp", alt:"Hari boleh beranjak petang. Aku masih ingin duduk di sini, tertawa bersamamu.", alt_en:"Let the daylight fade. I’d still choose to sit here, laughing with you."},
+   Urutan di array = urutan tampil di galeri dan lightbox. 
+*/
+var PHOTOS=[ 
+  {src:"foto/saling-menatap.webp", alt:"Di antara banyak hal yang ingin kukatakan, senyumku selalu lebih dulu menjawab.", alt_en:"Of all the things I want to tell you, my smile always speaks first."},
+  {src:"foto/bersama-di-taman.webp", alt:"Merayakan kita—dengan tawa lepas dan dua tangan yang menyapa dunia.", alt_en:"Here’s to us—to carefree laughter and greeting the world with open arms."},
+  {src:"foto/senja-bersama.webp", alt:"Hari boleh beranjak petang. Aku masih ingin duduk di sini, tertawa bersamamu.", alt_en:"Let the daylight fade. I’d still choose to sit here, laughing with you."},
+  {src:"foto/taufiq-adat.webp", alt:"Dengan niat yang baik dan hati yang mantap, aku bersiap berjalan bersamamu.", alt_en:"With a sincere heart and a steady promise, I’m ready to walk beside you."},
+  {src:"foto/pasangan-adat.webp", alt:"Berakar pada tradisi, bertumbuh dalam cinta. Bersamamu, aku menemukan tempat pulang.", alt_en:"Rooted in tradition, growing in love. With you, I’ve found my way home."},
+  {src:"foto/putri-adat.webp", alt:"Dalam balutan adat dan doa keluarga, satu langkah lebih dekat menuju kisah kita.", alt_en:"Wrapped in tradition and our families’ prayers, one step closer to our forever."}       
           ];
 var PHOTO_COUPLE="pasangan-adat.webp";         // URL foto untuk kartu "Mempelai" (opsional)
 var PHOTO_WALIMAH="pasangan-putih.webp";        // URL foto untuk kartu "Walimatul 'Urusy" (opsional)
@@ -708,6 +715,7 @@ Object.assign(I18N.id, {
  'dm.jwW':'Akad · 08.00','dm.jwT':'Jawa','dm.jwP':'Ijab kabul diikuti sungkeman: mempelai bersimpuh di hadapan orang tua, memohon restu dan maaf sebagai wujud bakti.','dm.jwA':'Busana adat Jawa Tengah',
  'dm.mnW':'Resepsi · 10.30','dm.mnT':'Minangkabau','dm.mnP':'Baralek di ranah Minang. Kedua mempelai basandiang di pelaminan untuk menerima doa dan ucapan selamat dari para tamu.','dm.mnA':'Busana adat Minangkabau',
  'dm.acW':'Penutup · 13.45','dm.acT':'Aceh','dm.acP':'Prosesi peusijuek menutup rangkaian adat: doa agar rumah tangga kami senantiasa sejuk, damai, dan diberkahi.','dm.acA':'Busana adat Aceh',
+ 'g2.note':'Momen ini kami bagikan untuk menemani kebahagiaan bersama. Mohon tidak menyebarluaskan foto tanpa izin kami.',
  'g.addrP':'Demi privasi, alamat pengiriman kami bagikan secara pribadi melalui WhatsApp.','g.addrBtn':'Minta Alamat via WhatsApp',
  'l.musala':'Musala','l.musalaV':'Tersedia di lingkungan SMKN 2 Padang','l.musalaS':'Sholat Dzuhur & Ashar berjamaah. Panitia siap mengarahkan.',
  'ru.note':'Waktu sholat menyesuaikan jadwal resmi Kemenag Kota Padang pada hari acara.',
@@ -728,6 +736,7 @@ Object.assign(I18N.en, {
  'dm.jwW':'Akad · 08.00','dm.jwT':'Javanese','dm.jwP':'The vows are followed by sungkeman: the couple kneel before their parents to ask for blessing and forgiveness, as an act of devotion.','dm.jwA':'Central Javanese attire',
  'dm.mnW':'Reception · 10.30','dm.mnT':'Minangkabau','dm.mnP':'A baralek in the Minang homeland. The couple sit side by side (basandiang) on the dais to receive prayers and wishes from guests.','dm.mnA':'Minangkabau attire',
  'dm.acW':'Closing · 13.45','dm.acT':'Acehnese','dm.acP':'The peusijuek ceremony closes the customs: a prayer that our home may always be cool, peaceful, and blessed.','dm.acA':'Acehnese attire',
+ 'g2.note':'We share these moments to celebrate our happiness together. Kindly do not share these photos without our permission.',
  'g.addrP':'For privacy, we share our delivery address personally via WhatsApp.','g.addrBtn':'Request Address via WhatsApp',
  'l.musala':'Prayer Room','l.musalaV':'Available within the SMKN 2 Padang grounds','l.musalaS':'Congregational Dhuhr & Asr prayers. Our team will guide you.',
  'ru.note':'Prayer times follow the official Ministry of Religious Affairs schedule for Padang on the day.',
