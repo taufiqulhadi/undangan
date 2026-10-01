@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://script.google.com https://script.googleusercontent.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; media-src 'self' blob: data: mediastream:; connect-src 'self' https://script.google.com https://script.googleusercontent.com; object-src 'none'; base-uri 'self'">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Check-in — Taufiqulhadi &amp; Yolla Yulia Putri</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.8/html5-qrcode.min.js"></script>
+<script>/* fallback: jika cdnjs gagal, muat dari jsDelivr */
+if(typeof Html5Qrcode==="undefined"){document.write('<scr'+'ipt src="https://cdn.jsdelivr.net/npm/html5-qrcode@2.3.8/html5-qrcode.min.js"><\/scr'+'ipt>');}
+</script>
+<style>
+:root{--bg:#F3EEE3;--ink:#2A211D;--soft:#6b5d50;--marun:#6E1423;--marund:#5C1020;--zamrud:#1F6B54;--emas:#C49A2F;--gading:#FBF7EF;--navy:#243B53;--line:rgba(42,33,29,.12);--ok:#1FAA53;--warn:#C8842B;--bad:#B23A48;--serif:'Fraunces',Georgia,serif;--sans:'Plus Jakarta Sans',system-ui,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.55;padding:18px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:520px;margin:0 auto}
+.topbar{display:flex;justify-content:flex-end;margin-bottom:4px}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.lang button{border:none;background:transparent;font-family:var(--sans);font-size:12px;font-weight:600;padding:6px 12px;cursor:pointer;color:var(--soft)}
+.lang button.on{background:var(--marun);color:#fff}
+header{text-align:center;margin:4px 0 18px}
+header .k{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--zamrud);font-weight:700}
+header h1{font-family:var(--serif);font-size:26px;color:var(--marun);margin-top:4px}
+header p{font-size:13px;color:var(--soft)}
+.card{background:var(--gading);border:1px solid var(--line);border-radius:18px;padding:18px;margin-bottom:16px;box-shadow:0 8px 24px rgba(0,0,0,.05)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--sans);font-weight:600;font-size:14px;border:none;border-radius:999px;padding:12px 20px;cursor:pointer;text-decoration:none;transition:.2s;background:var(--marun);color:#fff}
+.btn:hover{background:var(--marund)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn.ghost:hover{border-color:var(--emas)}
+.btn.wa{background:#1FAA53}.btn.wa:hover{background:#178c44}
+.btn.full{width:100%}
+.row{display:flex;gap:10px;flex-wrap:wrap}
+#reader{width:100%;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#000;min-height:60px}
+.hint{font-size:12px;color:var(--soft);margin-top:10px;text-align:center}
+.manual{display:flex;gap:8px;margin-top:14px}
+.manual input{flex:1;font-family:var(--sans);font-size:15px;padding:11px 14px;border:1.5px solid var(--line);border-radius:10px;background:#fff}
+.manual input.up{text-transform:uppercase}
+.manual input:focus{outline:none;border-color:var(--emas)}
+#review{background:var(--gading)}
+.jmlbox{margin:14px auto 0;max-width:240px}
+.jmlbox label{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--soft);font-weight:600;margin-bottom:6px;text-align:center}
+.jmlbox input,.jmlbox select{width:100%;font-family:var(--serif);font-size:22px;text-align:center;text-align-last:center;padding:10px 14px;border:1.5px solid var(--line);border-radius:12px;background:#fff;color:var(--marun)}
+.jmlbox select{-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%23C49A2F' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;cursor:pointer}
+.jmlbox input:focus,.jmlbox select:focus{outline:none;border-color:var(--emas)}
+.jmlbox input[readonly]{background:#f4efe4;color:var(--ink)}
+#rvNote{font-family:var(--sans);font-size:15px;text-align:left;color:var(--ink)}
+.result{display:none;text-align:center;border-radius:18px;padding:22px;margin-bottom:16px;border:1px solid var(--line)}
+.result.show{display:block;animation:fade .3s}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.result .badge{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:13px;letter-spacing:.04em;text-transform:uppercase;padding:7px 16px;border-radius:999px;color:#fff;margin-bottom:12px}
+.result .nm{font-family:var(--serif);font-size:30px;color:var(--marun);line-height:1.1}
+.result .meta{color:var(--soft);font-size:14px;margin-top:4px}
+.result .code{font-family:var(--serif);letter-spacing:.12em;font-size:15px;color:var(--ink);margin-top:10px}
+.r-ok{background:rgba(31,170,83,.1)}.r-ok .badge{background:var(--ok)}
+.r-warn{background:rgba(200,132,43,.12)}.r-warn .badge{background:var(--warn)}
+.r-bad{background:rgba(178,58,72,.1)}.r-bad .badge{background:var(--bad)}.r-bad .nm{color:var(--bad)}
+.stats{display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+.stat{flex:1;min-width:68px;background:var(--gading);border:1px solid var(--line);border-radius:14px;padding:14px;text-align:center}
+.filterbar{display:flex;gap:8px;margin:0 0 10px;flex-wrap:wrap}
+.fbtn{border:1px solid var(--line);background:#fff;color:var(--soft);font-family:var(--sans);font-size:12px;font-weight:600;padding:7px 12px;border-radius:999px;cursor:pointer}
+.fbtn.on{background:var(--marun);color:#fff;border-color:var(--marun)}
+.guest .gnote{font-size:12px;color:var(--zamrud);margin-top:2px}
+.guest .gact{display:flex;gap:8px;margin-top:6px}
+.guest .gact button{font:inherit;font-size:12px;padding:4px 10px;border-radius:8px;border:1px solid var(--line,#e3d9c4);background:#fff;color:var(--marun,#6E1423);cursor:pointer}
+.guest .gact .gdel{color:#b3261e}
+.guest .gact .gcheck{color:#147a3b;border-color:#9ad3b0;font-weight:600}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center;z-index:60;padding:16px}
+.modalbox{background:#fff;border-radius:16px;padding:20px;max-width:430px;width:100%;box-shadow:0 18px 50px rgba(0,0,0,.3)}
+.histrow{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid var(--line,#e3d9c4);font-size:13px}
+.histrow .ha{color:var(--marun,#6E1423);font-weight:600}
+.histrow .ht{color:#888;font-size:11px;white-space:nowrap}
+.stat b{font-family:var(--serif);font-size:26px;color:var(--marun);display:block}
+.stat span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft)}
+.guest{display:flex;justify-content:space-between;align-items:center;padding:10px 4px;border-bottom:1px dotted var(--line);font-size:14px}
+.guest:last-child{border-bottom:none}
+.guest .gn{font-weight:600}.guest .gc{font-size:11px;color:var(--soft);font-family:var(--serif);letter-spacing:.08em}
+.pill{font-size:11px;font-weight:600;padding:3px 10px;border-radius:999px}
+.pill.in{background:rgba(31,170,83,.14);color:#147a3b}.pill.no{background:rgba(0,0,0,.06);color:var(--soft)}
+.sectitle{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--zamrud);font-weight:700;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center}
+.warnbox{background:#FBEFD7;border:1px solid #E6C98A;color:#7a5a16;border-radius:12px;padding:12px 14px;font-size:13px;margin-bottom:16px}
+.beep{position:fixed;inset:0;background:var(--ok);opacity:0;pointer-events:none;transition:opacity .15s;z-index:99}
+.beep.flash{opacity:.18}
+
+.manual input{min-width:0}.code,.nm,.gn,.gc,.gnote,.queueitem{overflow-wrap:anywhere}
+.queuebar{position:sticky;top:0;z-index:50;display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:10px;border-radius:12px;margin-bottom:12px;font-size:12px}.queuebar .btn,.queueitem .btn{font-size:11px;padding:7px 12px}.queueitem{padding:10px 0;border-bottom:1px solid var(--line);font-size:12px}.queueitem .btn{margin-top:8px}.card[hidden]{display:none!important}.pill{white-space:normal;max-width:95px}.guest{gap:8px}.stats{gap:6px}
+@media(max-width:360px){body{padding:12px}.card{padding:14px}.sectitle{flex-wrap:wrap;gap:8px}.manual .btn{padding:10px 12px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="beep" id="flash"></div>
+<div class="wrap">
+  <div class="topbar"><div class="lang"><button data-lang="id" class="on">ID</button><button data-lang="en">EN</button></div></div>
+  <header>
+    <div class="k" data-i18n="s.kicker">Check-in Tamu</div>
+    <h1>Taufiqulhadi &amp; Yolla Yulia Putri</h1>
+    <p data-i18n="s.sub">Pindai barcode pada undangan tamu untuk mencatat kehadiran.</p>
+  </header>
+
+  <!-- LOGIN PANITIA -->
+  <div class="card" id="login" style="display:none">
+    <div class="sectitle" data-i18n="s.pinTitle">Login Panitia</div>
+    <div class="manual">
+      <input id="pinInput" type="password" inputmode="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" data-i18n-ph="s.pinLabel" placeholder="PIN Panitia">
+      <button class="btn" id="pinBtn" data-i18n="s.pinBtn">Masuk</button>
+    </div>
+    <div class="hint" id="pinMsg" data-i18n="s.pinHint">Masukkan PIN yang ditetapkan di Apps Script (ADMIN_PIN).</div>
+  </div>
+
+  <!-- APLIKASI -->
+  <div id="app" style="display:none">
+    <div class="warnbox" id="cfgWarn" data-i18n-html="s.warn">⚠️ <b>SHEETS_URL belum diisi.</b> Halaman berjalan dalam <b>mode demo</b> (hanya menampilkan kode, tidak tersimpan). Isi variabel <code>SHEETS_URL</code> &amp; login PIN untuk validasi penuh.</div>
+
+    <div class="result" id="review">
+      <div class="badge" style="background:var(--zamrud)" data-i18n="s.rvTitle">Tinjau Data Tamu</div>
+      <div class="nm" id="rvName">—</div>
+      <div class="meta" id="rvStatus">—</div>
+      <div class="code" id="rvCode">—</div>
+      <div class="meta" id="rvAlready" style="display:none;color:var(--warn);font-weight:600"></div>
+      <div class="jmlbox"><label data-i18n="s.rvJml">Jumlah Hadir</label><input id="rvJumlah" type="text" inputmode="numeric" autocomplete="off" readonly></div>
+      <div class="jmlbox"><label data-i18n="s.rvNote">Catatan</label><input id="rvNote" maxlength="300" type="text" autocomplete="off" data-i18n-ph="s.rvNotePh" placeholder="mis. No. meja, rombongan, dll"></div>
+      <div class="rbtns" style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:16px">
+        <button class="btn" id="rvConfirm" data-i18n="s.rvConfirm">✓ Konfirmasi Check-in</button>
+        <button class="btn ghost" id="rvEdit" data-i18n="s.rvEdit">✎ Edit Jumlah</button>
+        <button class="btn ghost" id="rvCancel" data-i18n="s.rvCancel">✕ Batal</button>
+      </div>
+    </div>
+    <div class="result" id="result"></div>
+
+    <div class="card" id="camCard" style="display:none">
+      <div class="sectitle" data-i18n="s.cam">Pemindai Kamera</div>
+      <div id="reader"></div>
+      <div class="row" style="margin-top:12px">
+        <button class="btn full" id="startBtn" data-i18n="s.start">▶ Mulai Kamera</button>
+        <button class="btn ghost full" id="stopBtn" style="display:none" data-i18n="s.stop">■ Hentikan</button>
+      </div>
+      <div class="hint" data-i18n="s.hint">Kamera memerlukan akses HTTPS &amp; izin kamera. Arahkan ke QR/Code-39 pada undangan.</div>
+      <div class="manual">
+        <input id="manualCode" class="up" data-i18n-ph="s.manualPh" placeholder="Atau ketik kode reservasi (RSVP-...)" autocomplete="off" autocapitalize="characters" spellcheck="false">
+        <button class="btn" id="manualBtn" data-i18n="s.checkin">Check-in</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="sectitle"><span data-i18n="s.guests">Daftar Tamu</span><span style="display:flex;gap:8px"><button class="btn ghost" id="exportBtn" style="padding:7px 12px;font-size:12px" data-i18n="s.export">⤓ Ekspor</button><button class="btn ghost" id="refreshBtn" style="padding:7px 12px;font-size:12px" data-i18n="s.refresh">↻ Muat Ulang</button></span></div>
+      <div class="stats">
+        <div class="stat"><b id="stTotal">–</b><span data-i18n="s.stRsvp">RSVP</span></div>
+        <div class="stat"><b id="stHadir">–</b><span data-i18n="s.stHadir">Hadir</span></div>
+        <div class="stat"><b id="stChecked">–</b><span data-i18n="s.stChecked">Check-in</span></div>
+        <div class="stat"><b id="stPeople">–</b><span data-i18n="s.stPeople">Orang Hadir</span></div>
+      </div>
+      <div class="manual" style="margin-bottom:6px"><input id="search" data-i18n-ph="s.searchPh" placeholder="Cari nama atau kode…" autocomplete="off"></div>
+      <div class="filterbar"><button type="button" class="fbtn on" data-filter="all" data-i18n="s.fAll">Semua</button><button type="button" class="fbtn" data-filter="no" data-i18n="s.fNo">Belum Hadir</button><button type="button" class="fbtn" data-filter="in" data-i18n="s.fIn">Sudah</button></div>
+      <div id="guestList"><div class="hint" data-i18n="s.listHint">Tekan "Muat Ulang" untuk menampilkan daftar tamu.</div></div>
+    </div>
+
+    <div class="card">
+      <div class="sectitle"><span data-i18n="s.histTitle">Riwayat</span><button class="btn ghost" id="histBtn" style="padding:7px 12px;font-size:12px" data-i18n="s.histLoad">↻ Muat Riwayat</button></div>
+      <div class="hint" data-i18n="s.histHint">Riwayat check-in, batal check-in, edit &amp; penghapusan tamu.</div>
+      <div id="histList"></div>
+    </div>
+    <div class="hint" style="text-align:center;opacity:.55;margin-top:8px">Scanner v14 · 2026-10-01</div>
+  </div>
+</div>
+
+<div id="editModal" class="modal" style="display:none">
+  <div class="modalbox">
+    <div class="sectitle" data-i18n="s.editTitle">Edit Data Tamu</div>
+    <div class="jmlbox"><label data-i18n="s.edName">Nama</label><input id="edName" maxlength="100" type="text" autocomplete="off"></div>
+    <div class="jmlbox"><label data-i18n="s.edStatus">Kehadiran</label><select id="edStatus"><option value="Hadir" data-i18n="s.optHadir">Hadir</option><option value="Tidak Hadir" data-i18n="s.optTidak">Tidak Hadir</option></select></div>
+    <div class="jmlbox"><label data-i18n="s.edJml">Jumlah Tamu</label><input id="edJml" type="number" min="0" max="5" step="1" inputmode="numeric" autocomplete="off"></div>
+    <div class="jmlbox"><label data-i18n="s.edNote">Catatan</label><input id="edNote" maxlength="300" type="text" autocomplete="off"></div>
+    <p id="edMsg" role="status" aria-live="polite" class="hint"></p>
+    <div class="rbtns" style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:14px">
+      <button class="btn" id="edSave" data-i18n="s.edSave">Simpan</button>
+      <button class="btn ghost" id="edDelete" data-i18n="s.edDelete">Hapus Tamu</button>
+      <button class="btn ghost" id="edCancel" data-i18n="s.edCancel">Batal</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ===== KONFIGURASI ===== */
+var SHEETS_URL = "https://script.google.com/macros/s/AKfycbxLEdetOwFNHtc7HdSZLl59VOtLA6T-7Y4f0wSO2GONx154o9ynzEwcbpkALCma2yEK1w/exec";   // tempel URL Web App (.../exec) yang sama dengan undangan
+var PIN = "";          // diisi otomatis dari layar Login Panitia
+
+/* ===== I18N ANTARMUKA SCANNER ===== */
+var SI18N={
+ id:{
+  "s.kicker":"Check-in Tamu","s.sub":"Pindai barcode pada undangan tamu untuk mencatat kehadiran.",
+  "s.warn":"⚠️ <b>SHEETS_URL belum diisi.</b> Halaman berjalan dalam <b>mode demo</b> (hanya menampilkan kode, tidak tersimpan). Isi variabel <code>SHEETS_URL</code> &amp; login PIN untuk validasi penuh.",
+  "s.cam":"Pemindai Kamera","s.start":"▶ Mulai Kamera","s.stop":"■ Hentikan",
+  "s.hint":"Kamera memerlukan akses HTTPS & izin kamera. Arahkan ke QR/Code-39 pada undangan.",
+  "s.manualPh":"Atau ketik kode reservasi (RSVP-...)","s.checkin":"Check-in",
+  "s.guests":"Daftar Tamu","s.refresh":"↻ Muat Ulang","s.export":"⤓ Ekspor","s.stRsvp":"RSVP","s.stHadir":"Hadir","s.stChecked":"Check-in","s.stPeople":"Orang Hadir","s.fAll":"Semua","s.fNo":"Belum Hadir","s.fIn":"Sudah",
+  "s.listHint":"Tekan \"Muat Ulang\" untuk menampilkan daftar tamu.","s.searchPh":"Cari nama atau kode…","s.rvTitle":"Tinjau Data Tamu","s.rvJml":"Jumlah Hadir","s.rvConfirm":"✓ Konfirmasi Check-in","s.rvEdit":"✎ Edit Jumlah","s.rvCancel":"✕ Batal","s.rvAlready":"Tamu ini sudah check-in.","s.rvNote":"Catatan","s.rvNotePh":"mis. No. meja, rombongan, dll","d.people":"orang","d.edit":"\u270e Edit","d.del":"\ud83d\uddd1 Hapus","d.confirmDel":"Hapus tamu ini dari daftar? Tindakan tercatat di Riwayat.","d.histEmpty":"Belum ada riwayat.","d.online":"Online","d.offline":"Offline","d.pending":"menunggu sinkron","d.syncNow":"Sinkronkan","d.pendingNote":"⏳ Tersimpan di perangkat, menunggu sinkron ke server.","d.offlineNoCache":"Tidak ada koneksi & belum ada data tersimpan. Sambungkan internet lalu login sekali.","d.nfOffline":"Kode tidak ada di data tersimpan. Coba saat online, atau cari via nama.","d.rescan":"\ud83d\udcf7 Pindai Lagi","d.listCheckin":"\u2713 Check-in","s.histTitle":"Riwayat","s.histLoad":"\u21bb Muat Riwayat","s.histHint":"Riwayat check-in, batal check-in, edit & penghapusan tamu.","s.editTitle":"Edit Data Tamu","s.edName":"Nama","s.edStatus":"Kehadiran","s.edJml":"Jumlah Tamu","s.edNote":"Catatan","s.optHadir":"Hadir","s.optTidak":"Tidak Hadir","s.optBelum":"Belum","s.edSave":"Simpan","s.edDelete":"Hapus Tamu","s.edCancel":"Batal",
+  "s.pinTitle":"Login Panitia","s.pinLabel":"PIN Panitia","s.pinBtn":"Masuk","s.pinWrong":"PIN salah. Coba lagi.","s.pinHint":"Masukkan PIN yang ditetapkan di Apps Script (ADMIN_PIN).",
+  "d.demoBadge":"Mode Demo","d.demoMeta":"Kode terbaca. Hubungkan SHEETS_URL untuk validasi & pencatatan.",
+  "d.failBadge":"Gagal","d.failNm":"Koneksi bermasalah","d.failMeta":"Periksa SHEETS_URL / koneksi internet.",
+  "d.busyB":"Sistem Sibuk","d.busyM":"Banyak check-in bersamaan. Mohon pindai lagi sebentar lagi.",
+  "d.authBadge":"Akses Ditolak","d.authMeta":"PIN panitia salah atau belum dimasukkan.",
+  "d.nfBadge":"Tidak Ditemukan","d.nfMeta":"Kode tidak terdaftar pada daftar RSVP.",
+  "d.alBadge":"Sudah Check-in","d.alMeta":"Tamu ini sudah tercatat hadir sebelumnya.",
+  "d.okBadge":"✓ Check-in Berhasil","d.waSent":"✓ Ucapan terima kasih terkirim otomatis via WhatsApp",
+  "d.thxBtn":"💬 Kirim Ucapan via WhatsApp","d.noWa":"Nomor WhatsApp tamu tidak tersedia — ucapan tidak dapat dikirim.",
+  "d.uncheck":"↩ Batalkan Check-in","d.unchecked":"Check-in Dibatalkan",
+  "d.listDemo":"Mode demo — hubungkan SHEETS_URL untuk melihat daftar tamu.","d.listFail":"Gagal memuat. Periksa SHEETS_URL.","d.listEmpty":"Belum ada data.",
+  "d.pillIn":"✓ Hadir","d.pillNo":"belum",
+  "d.alertLib":"Pustaka pemindai gagal dimuat. Periksa koneksi internet.","d.camErr":"Tidak dapat mengakses kamera: ","d.camUse":"\nGunakan input kode manual di bawah."
+ },
+ en:{
+  "s.kicker":"Guest Check-in","s.sub":"Scan the barcode on the guest's invitation to record attendance.",
+  "s.warn":"⚠️ <b>SHEETS_URL is empty.</b> The page runs in <b>demo mode</b> (shows the code only, nothing saved). Set <code>SHEETS_URL</code> &amp; log in with PIN for full validation.",
+  "s.cam":"Camera Scanner","s.start":"▶ Start Camera","s.stop":"■ Stop",
+  "s.hint":"Camera requires HTTPS & camera permission. Point it at the QR/Code-39 on the invitation.",
+  "s.manualPh":"Or type the reservation code (RSVP-...)","s.checkin":"Check-in",
+  "s.guests":"Guest List","s.refresh":"↻ Refresh","s.export":"⤓ Export","s.stRsvp":"RSVP","s.stHadir":"Attending","s.stChecked":"Checked-in","s.stPeople":"Headcount","s.fAll":"All","s.fNo":"Not Yet","s.fIn":"Checked",
+  "s.listHint":"Tap \"Refresh\" to show the guest list.","s.searchPh":"Search name or code…","s.rvTitle":"Review Guest Details","s.rvJml":"Guests Present","s.rvConfirm":"✓ Confirm Check-in","s.rvEdit":"✎ Edit Count","s.rvCancel":"✕ Cancel","s.rvAlready":"This guest is already checked in.","s.rvNote":"Note","s.rvNotePh":"e.g. table no., group, etc","d.people":"guest(s)","d.edit":"\u270e Edit","d.del":"\ud83d\uddd1 Delete","d.confirmDel":"Remove this guest from the list? This action is logged in History.","d.histEmpty":"No history yet.","d.online":"Online","d.offline":"Offline","d.pending":"pending sync","d.syncNow":"Sync now","d.pendingNote":"⏳ Saved on device, waiting to sync to server.","d.offlineNoCache":"No connection and no saved data yet. Connect to the internet and log in once.","d.nfOffline":"Code not in saved data. Try again online, or search by name.","d.rescan":"\ud83d\udcf7 Scan Again","d.listCheckin":"\u2713 Check-in","s.histTitle":"History","s.histLoad":"\u21bb Load History","s.histHint":"Log of check-ins, undone check-ins, edits & guest deletions.","s.editTitle":"Edit Guest","s.edName":"Name","s.edStatus":"Attendance","s.edJml":"Guest Count","s.edNote":"Note","s.optHadir":"Attending","s.optTidak":"Not Attending","s.optBelum":"Pending","s.edSave":"Save","s.edDelete":"Delete Guest","s.edCancel":"Cancel",
+  "s.pinTitle":"Committee Login","s.pinLabel":"Committee PIN","s.pinBtn":"Enter","s.pinWrong":"Wrong PIN. Try again.","s.pinHint":"Enter the PIN set in Apps Script (ADMIN_PIN).",
+  "d.demoBadge":"Demo Mode","d.demoMeta":"Code read. Connect SHEETS_URL to validate & record.",
+  "d.failBadge":"Failed","d.failNm":"Connection problem","d.failMeta":"Check SHEETS_URL / internet connection.",
+  "d.busyB":"System Busy","d.busyM":"Many simultaneous check-ins. Please scan again in a moment.",
+  "d.authBadge":"Access Denied","d.authMeta":"Committee PIN is wrong or missing.",
+  "d.nfBadge":"Not Found","d.nfMeta":"This code is not in the RSVP list.",
+  "d.alBadge":"Already Checked-in","d.alMeta":"This guest was already recorded as present.",
+  "d.okBadge":"✓ Check-in Successful","d.waSent":"✓ Thank-you message sent automatically via WhatsApp",
+  "d.thxBtn":"💬 Send Thank-you via WhatsApp","d.noWa":"Guest's WhatsApp number is unavailable — message can't be sent.",
+  "d.uncheck":"↩ Undo Check-in","d.unchecked":"Check-in Undone",
+  "d.listDemo":"Demo mode — connect SHEETS_URL to view the guest list.","d.listFail":"Failed to load. Check SHEETS_URL.","d.listEmpty":"No data.",
+  "d.pillIn":"✓ Present","d.pillNo":"not yet",
+  "d.alertLib":"Scanner library failed to load. Check your internet connection.","d.camErr":"Cannot access camera: ","d.camUse":"\nUse manual code entry below."
+ }
+};
+var scanLang='id';
+function st(k){ return (SI18N[scanLang]&&SI18N[scanLang][k]!=null)?SI18N[scanLang][k]:k; }
+var listShown=false, allRows=[], statusFilter='all';
+function applyScanLang(l){
+  scanLang=l; document.documentElement.lang=l;
+  document.querySelectorAll('[data-i18n]').forEach(function(e){var k=e.getAttribute('data-i18n');if(SI18N[l][k]!=null)e.textContent=SI18N[l][k];});
+  document.querySelectorAll('[data-i18n-ph]').forEach(function(e){var k=e.getAttribute('data-i18n-ph');if(SI18N[l][k]!=null)e.placeholder=SI18N[l][k];});
+  document.querySelectorAll('[data-i18n-html]').forEach(function(e){var k=e.getAttribute('data-i18n-html');if(SI18N[l][k]!=null)e.innerHTML=SI18N[l][k];});
+  document.querySelectorAll('.lang button').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-lang')===l);});
+  if(listShown) applyFilter();
+  if(typeof updateNetBar==='function')updateNetBar();
+}
+document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){applyScanLang(b.getAttribute('data-lang'));});});
+
+/* ===== AUDIO (beep) ===== */
+var actx=null;
+function initAudio(){ try{ if(!actx) actx=new (window.AudioContext||window.webkitAudioContext)(); if(actx.state==='suspended') actx.resume(); }catch(e){} }
+function tone(freq,start,dur,vol){ if(!actx)return; var o=actx.createOscillator(),g=actx.createGain(); o.type='sine'; o.frequency.value=freq; o.connect(g); g.connect(actx.destination); g.gain.setValueAtTime(vol||0.09,actx.currentTime+start); o.start(actx.currentTime+start); o.stop(actx.currentTime+start+dur); }
+function playBeep(type){ if(!actx)return; if(type==='ok'){ tone(880,0,0.12); tone(1320,0.12,0.15); } else if(type==='warn'){ tone(620,0,0.2); } else { tone(200,0,0.32,0.12); } }
+
+/* Requests use simple POST bodies, keeping credentials out of URLs. */
+var authenticated=false, authExpires=0, loginBusy=false;
+async function jsonp(params,cb){
+ if(!SHEETS_URL){cb({ok:false,demo:true});return;}
+ var controller=new AbortController(),timer=setTimeout(function(){controller.abort();},15000),data;
+ try{
+  var body=new URLSearchParams(params);body.set('admin','1');body.set('pin',PIN);
+  var response=await fetch(SHEETS_URL,{method:'POST',body:body,credentials:'omit',redirect:'follow',signal:controller.signal});
+  if(!response.ok)throw new Error('http');data=await response.json();
+  if(!data||typeof data.ok!=='boolean')throw new Error('response');
+  isOnline=true;
+  if(data.error==='auth'){authenticated=false;authExpires=0;clearOfflineSession();allRows=[];stopCamera();document.getElementById('app').style.display='none';document.getElementById('login').style.display='block';document.getElementById('pinMsg').textContent=st('s.pinWrong');}
+ }catch(e){isOnline=false;data={ok:false,error:e.name==='AbortError'?'timeout':'network'};}
+ finally{clearTimeout(timer);}
+ updateNetBar();cb(data);
+}
+function message(id,en){return scanLang==='en'?en:id;}
+function actionError(d){
+ var errors={auth:['PIN tidak valid. Login kembali.','Invalid PIN. Sign in again.'],invalid:['Jumlah harus bilangan bulat 1–5 untuk tamu hadir. Periksa isian.','Attending guest count must be an integer from 1 to 5. Check the fields.'],not_attending:['Tamu berstatus tidak hadir. Ubah status melalui Edit sebelum check-in.','Guest is not attending. Edit their status before check-in.'],not_found:['Kode tidak ditemukan di server.','Code was not found on the server.'],busy:['Server sibuk. Coba lagi.','Server is busy. Retry.'],needs_review:['Hasil operasi belum pasti. Periksa daftar dan riwayat server sebelum mengulang.','Operation outcome is uncertain. Check server guest list and history before retrying.'],transport:['Perbarui deployment Apps Script dari paket ini.','Update Apps Script deployment from this package.']};
+ var a=errors[d&&d.error];return a?a[scanLang==='en'?1:0]:message('Aksi belum berhasil: ','Action has not succeeded: ')+String(d&&d.error||'network');
+}
+function reportActionError(d){showResult('',{ok:false,error:d&&d.error||'failed'});}
+function freshId(){var a=new Uint8Array(16);crypto.getRandomValues(a);return Array.from(a,function(x){return x.toString(16).padStart(2,'0');}).join('');}
+function normalizeCode(c){return String(c||'').trim().toUpperCase();}
+function validCode(c){return /^RSVP-[A-Z0-9-]{3,35}$/.test(c);}
+function guestCount(v,allowZero){var t=String(v==null?'':v).trim();if(!/^\d+$/.test(t))return null;var n=Number(t);return Number.isInteger(n)&&n>=(allowZero?0:1)&&n<=5?n:null;}
+function attending(s){s=String(s||'').toLowerCase();return !/tidak|belum|unable|\bnot\b|\bno\b|pending|batal|cancel/.test(s)&&/hadir|attend|\byes\b|\bya\b/.test(s);}
+function sessionValid(){return authenticated&&Date.now()<authExpires;}
+var SESSION_KEY='tp27_staff_session:'+SHEETS_URL;
+async function pinDigest(pin,salt){var bytes=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(salt+'|'+SHEETS_URL+'|'+pin));return Array.from(new Uint8Array(bytes),function(x){return x.toString(16).padStart(2,'0');}).join('');}
+async function rememberSession(){
+ authenticated=true;authExpires=Date.now()+12*60*60*1000;
+ try{var salt=freshId();sessionStorage.setItem(SESSION_KEY,JSON.stringify({salt:salt,digest:await pinDigest(PIN,salt),until:authExpires}));}catch(e){}
+}
+async function allowOfflineLogin(pin){
+ try{var s=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'null');if(!s||!s.salt||Date.now()>=s.until||await pinDigest(pin,s.salt)!==s.digest)return false;authenticated=true;authExpires=s.until;return true;}catch(e){return false;}
+}
+function clearOfflineSession(){try{sessionStorage.removeItem(SESSION_KEY);}catch(e){}}
+
+/* Durable operation queue. Only acknowledged operation IDs are removed. */
+var Q_LS='tp27_ci_queue_v2:'+SHEETS_URL,L_LS='tp27_ci_list_v2:'+SHEETS_URL,isOnline=true,flushing=false,inflightId='',queueError='';
+var syncQueue=(function(){try{var a=JSON.parse(localStorage.getItem(Q_LS)||'[]');return Array.isArray(a)?a.filter(function(x){return x&&/^[a-f0-9]{32}$/.test(x.id)&&validCode(x.code)&&['checkin','uncheck'].includes(x.action)&&['ready','sending','rejected'].includes(x.state);}).map(function(x){if(x.state==='sending')x.state='ready';return x;}):[];}catch(e){return [];}})();
+function saveQueue(){try{localStorage.setItem(Q_LS,JSON.stringify(syncQueue));return true;}catch(e){queueError=message('Tidak dapat menyimpan antrean di perangkat.','Cannot save the queue on this device.');return false;}}
+function saveListCache(){try{localStorage.setItem(L_LS,JSON.stringify({rows:allRows,t:Date.now()}));}catch(e){}}
+function loadListCache(){try{var c=JSON.parse(localStorage.getItem(L_LS)||'null');return c&&Array.isArray(c.rows)&&Date.now()-c.t<24*60*60*1000?c:null;}catch(e){return null;}}
+function netDown(){return navigator.onLine===false||!isOnline;}
+function findRow(code){code=normalizeCode(code);return allRows.find(function(r){return normalizeCode(r.kode)===code;})||null;}
+function hasPending(code){return syncQueue.some(function(x){return x.code===code&&x.state!=='rejected';});}
+function enqueueOperation(action,code,jumlah,note){
+ var item={id:freshId(),action:action,code:code,jumlah:jumlah==null?'':String(jumlah),note:String(note||'').slice(0,300),ts:Date.now(),state:'ready',error:''};
+ syncQueue.push(item);if(!saveQueue()){syncQueue.pop();updateNetBar();return null;}updateNetBar();return item;
+}
+function setOnline(v){isOnline=v;updateNetBar();if(v&&sessionValid())flushQueue();}
+var probing=false;
+function syncNow(){
+ if(!syncQueue.length||!sessionValid()||navigator.onLine===false||probing)return;
+ if(isOnline){flushQueue();return;}
+ // Some venue failures do not trigger the browser's online event.
+ probing=true;jsonp('action=list',function(d){probing=false;if(d&&d.ok&&d.protocol==='scanner-v14'){renderListData(d);flushQueue();}});
+}
+function recomputeStats(){
+ var total=allRows.length,yes=allRows.filter(function(r){return attending(r.status);}).length,checked=allRows.filter(function(r){return !!r.checkin;});
+ document.getElementById('stTotal').textContent=total;document.getElementById('stHadir').textContent=yes;document.getElementById('stChecked').textContent=checked.length;
+ document.getElementById('stPeople').textContent=checked.reduce(function(n,r){return n+parseNum(r.jumlah);},0);
+}
+function localCheckin(code,jumlah,note){
+ code=normalizeCode(code);var r=findRow(code),n=guestCount(jumlah,false);
+ if(!sessionValid()){reportActionError({error:'auth'});return;}
+ if(!r){showResult(code,{ok:true,found:false,_offline:true});return;}
+ if(!attending(r.status)||n===null){reportActionError({error:!attending(r.status)?'not_attending':'invalid'});return;}
+ if(hasPending(code)){showResult(code,{ok:true,found:true,nama:r.nama,status:r.status,jumlah:n,_pending:true});return;}
+ if(r.checkin){showResult(code,{ok:true,found:true,already:true,nama:r.nama,status:r.status,jumlah:r.jumlah});return;}
+ if(!enqueueOperation('checkin',code,n,note)){reportActionError({error:'storage'});return;}
+ showResult(code,{ok:true,found:true,nama:r.nama,status:r.status,jumlah:n,_pending:true});applyFilter();flushQueue();
+}
+function flushQueue(){
+ if(flushing||!SHEETS_URL||!sessionValid()||netDown()){updateNetBar();return;}
+ // Rejects remain visible for review, without blocking other guests.
+ var item=syncQueue.find(function(x,i){return x.state==='ready'&&!syncQueue.slice(0,i).some(function(y){return y.code===x.code;});});
+ if(!item){updateNetBar();return;}
+ flushing=true;inflightId=item.id;item.state='sending';saveQueue();updateNetBar();
+ var params=new URLSearchParams({action:item.action,code:item.code,opId:item.id});if(item.jumlah!=='')params.set('jumlah',item.jumlah);params.set('catatan',item.note);
+ jsonp(params.toString(),function(d){
+  flushing=false;inflightId='';var current=syncQueue.find(function(x){return x.id===item.id;});if(!current){updateNetBar();return;}
+  var success=d&&d.ok===true&&d.found===true&&d.opId===item.id&&d.code===item.code&&(item.action==='checkin'?!!d.checkin:d.unchecked===true);
+  if(success){
+   syncQueue=syncQueue.filter(function(x){return x.id!==item.id;});saveQueue();
+   var r=findRow(item.code);if(r){r.checkin=item.action==='checkin'?d.checkin:'';if(d.jumlah!=null)r.jumlah=d.jumlah;if(d.note!=null)r.note=d.note;saveListCache();}
+   if(item.action==='checkin'&&rvCurrentCode===item.code)showResult(item.code,d);
+   if(item.action==='uncheck'&&rvCurrentCode===item.code)showUncheckSuccess(item.code,d);
+   recomputeStats();applyFilter();updateNetBar();if(syncQueue.some(function(x){return x.state==='ready';}))flushQueue();else loadList();return;
+  }
+  var error=d&&d.ok&&d.found===false?'not_found':d&&d.error||'unverified';
+  if(['network','timeout','busy','rate','failed','save_failed'].includes(error)){current.state='ready';current.error=error;if(['network','timeout'].includes(error))isOnline=false;}
+  else if(error==='auth'){current.state='ready';current.error='auth';authenticated=false;clearOfflineSession();}
+  else{current.state='rejected';current.error=error;}
+  saveQueue();updateNetBar();applyFilter();
+  if(current.state==='rejected'){if(rvCurrentCode===item.code)reportActionError({error:error});flushQueue();}
+ });
+}
+function initNetBar(){
+ var app=document.getElementById('app');if(document.getElementById('netbar'))return;
+ var bar=document.createElement('div');bar.id='netbar';bar.className='queuebar';bar.innerHTML='<span id="netbarTxt" role="status" aria-live="polite"></span><button id="netbarSync" class="btn ghost" type="button"></button><button id="logoutBtn" class="btn ghost" type="button"></button>';
+ app.insertBefore(bar,app.firstChild);var box=document.createElement('div');box.id='queuePanel';box.className='card';app.insertBefore(box,bar.nextSibling);
+ document.getElementById('netbarSync').onclick=function(){if(!sessionValid()){document.getElementById('login').style.display='block';return;}syncNow();};
+ document.getElementById('logoutBtn').onclick=function(){stopCamera();authenticated=false;authExpires=0;PIN='';clearOfflineSession();allRows=[];document.getElementById('pinInput').value='';document.getElementById('app').style.display='none';document.getElementById('login').style.display='block';document.getElementById('pinMsg').textContent=message('Sesi dikunci. Antrean tetap disimpan.','Session locked. Queue retained.');};
+ try{var legacy=JSON.parse(localStorage.getItem('tp27_ci_queue')||'[]');if(Array.isArray(legacy)&&legacy.length){var warning=document.createElement('div');warning.className='card';var label=document.createElement('p');label.textContent=message('Antrean scanner lama ditemukan. Simpan salinannya, lalu cocokkan dengan daftar dan riwayat server sebelum check-in ulang.','An old scanner queue was found. Save a copy, then reconcile with server guest list and history before checking in again.');warning.appendChild(label);var exportOld=document.createElement('button');exportOld.className='btn ghost';exportOld.textContent=message('Simpan antrean lama','Save old queue');exportOld.onclick=function(){var url=URL.createObjectURL(new Blob([JSON.stringify(legacy,null,2)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download='antrean-scanner-lama.json';a.click();setTimeout(function(){URL.revokeObjectURL(url);},1000);};warning.appendChild(exportOld);app.insertBefore(warning,box.nextSibling);}}catch(e){}
+ updateNetBar();
+}
+function updateNetBar(){
+ var bar=document.getElementById('netbar');if(!bar)return;var rejected=syncQueue.filter(function(x){return x.state==='rejected';}).length,pending=syncQueue.length-rejected;
+ var on=isOnline&&navigator.onLine!==false;bar.style.background=on?'#e6f4ea':'#fff4d6';
+ document.getElementById('netbarTxt').textContent=(on?st('d.online'):st('d.offline'))+' · '+pending+' '+st('d.pending')+(rejected?' · '+rejected+' '+message('perlu ditinjau','need review'):'')+(!sessionValid()?' · '+message('Login diperlukan','Sign in required'):'');
+ document.getElementById('netbarSync').textContent=st('d.syncNow');document.getElementById('netbarSync').disabled=flushing;document.getElementById('logoutBtn').textContent=message('Kunci','Lock');
+ var box=document.getElementById('queuePanel');var attempts=typeof adminAttempts==='object'?Object.keys(adminAttempts):[];box.hidden=!syncQueue.length&&!queueError&&!attempts.length;box.replaceChildren();
+ if(queueError){var warning=document.createElement('p');warning.textContent=queueError;box.appendChild(warning);}
+ syncQueue.forEach(function(item){var row=document.createElement('div');row.className='queueitem';var label=document.createElement('div');label.textContent=item.code+' · '+(item.action==='uncheck'?message('Batal check-in','Undo check-in'):message('Check-in','Check-in'))+' · '+(item.state==='rejected'?actionError({error:item.error}):item.state==='sending'?message('Mengirim…','Sending…'):message('Menunggu sinkron','Waiting to sync'));row.appendChild(label);
+  if(item.state==='rejected'){var remove=document.createElement('button');remove.className='btn ghost';remove.textContent=message('Hapus dari antrean','Remove from queue');remove.onclick=function(){if(confirm(message('Hapus operasi ini dari antrean lokal? Hasil server tidak diubah.','Remove this local queued operation? Server state will not change.'))){syncQueue=syncQueue.filter(function(x){return x.id!==item.id;});saveQueue();updateNetBar();applyFilter();flushQueue();}};row.appendChild(remove);}
+  box.appendChild(row);
+ });
+ attempts.forEach(function(code){var row=document.createElement('div');row.className='queueitem';var label=document.createElement('p');label.textContent=code+' · '+message('Edit/hapus belum terkonfirmasi. Ulangi isian yang sama atau periksa hasil server.','Edit/delete is not confirmed. Retry the same fields or check server state.');row.appendChild(label);
+  var inspect=document.createElement('button');inspect.className='btn ghost';inspect.textContent=message('Periksa dan selesaikan','Inspect and resolve');inspect.onclick=function(){if(netDown()){reportActionError({error:'network'});return;}jsonp('action=lookup&code='+encodeURIComponent(code),function(d){if(!d||!d.ok){reportActionError(d);return;}var current=d.found?(d.nama+' · '+d.status+' · '+d.jumlah+' · '+(d.checkin||'-')):message('Tidak ditemukan','Not found');if(confirm(message('Kondisi server saat ini: ','Current server state: ')+current+'\n'+message('Periksa juga Riwayat. Tandai percobaan lama selesai? Aksi baru akan memakai ID baru.','Check History too. Mark the old attempt resolved? New actions will use a new ID.'))){delete adminAttempts[code];saveAdminAttempts();updateNetBar();loadList();}});};row.appendChild(inspect);box.appendChild(row);
+ });
+}
+
+/* ===== HELPERS ===== */
+function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+function normNum(n){ n=String(n==null?'':n).replace(/[^0-9]/g,''); if(!n)return ''; if(n.charAt(0)==='0')n='62'+n.substring(1); else if(n.substring(0,2)!=='62'&&n.charAt(0)==='8')n='62'+n; return n; }
+function buildThanks(nama,lang){ if(lang==='en'){ return 'Hello '+(nama||'')+', thank you for attending and sharing in the joy of the wedding of Taufiqulhadi & Yolla Yulia Putri. Your presence and prayers mean so much to us. Warm regards, #TaufiqPutriMelabuh'; } return 'Halo '+(nama||'')+', terima kasih telah hadir dan berbagi kebahagiaan di pernikahan Taufiqulhadi & Yolla Yulia Putri. Kehadiran serta doa restu Anda sangat berarti bagi kami. Salam hangat, #TaufiqPutriMelabuh'; }
+function flash(){ var f=document.getElementById('flash'); f.classList.add('flash'); setTimeout(function(){f.classList.remove('flash');},180); }
+
+function showResult(code,d){
+ var el=document.getElementById('result');el.className='result show';document.getElementById('review').className='result';showCam(false);
+ var kind='r-bad',badge=st('d.failBadge'),name=code||st('d.failNm'),meta=actionError(d);
+ if(d&&d.demo){kind='r-warn';badge=st('d.demoBadge');meta=st('d.demoMeta');}
+ else if(d&&d.ok&&!d.found){badge=st('d.nfBadge');meta=d._offline?st('d.nfOffline'):st('d.nfMeta');}
+ else if(d&&d.ok&&d.found){name=d.nama;meta=d.status+' · '+pplTxt(d.jumlah);if(d._pending){kind='r-warn';badge=message('Menunggu sinkronisasi','Awaiting sync');meta+=' · '+st('d.pendingNote');}else if(d.already){kind='r-warn';badge=st('d.alBadge');}else{kind='r-ok';badge=st('d.okBadge');flash();}}
+ el.classList.add(kind);playBeep(kind==='r-ok'?'ok':kind==='r-warn'?'warn':'bad');
+ el.innerHTML='<div class="badge">'+esc(badge)+'</div><div class="nm">'+esc(name)+'</div><div class="meta">'+esc(meta)+'</div><div class="code">'+esc(code)+'</div>'+(d&&d.note?'<div class="meta">'+esc(d.note)+'</div>':'');
+ if(d&&d.ok&&d.found){var actions=document.createElement('div');actions.className='row';actions.style.justifyContent='center';
+  if(!d._pending&&normNum(d.wa)){var a=document.createElement('a');a.className='btn wa';a.target='_blank';a.rel='noopener';a.textContent=st('d.thxBtn');a.href='https://wa.me/'+normNum(d.wa)+'?text='+encodeURIComponent(buildThanks(d.nama,d.lang));actions.appendChild(a);}
+  var undo=document.createElement('button');undo.type='button';undo.className='btn ghost';undo.textContent=st('d.uncheck');undo.onclick=function(){doUncheck(code);};actions.appendChild(undo);el.appendChild(actions);
+ }
+ var rescan=document.createElement('button');rescan.className='btn';rescan.type='button';rescan.textContent=st('d.rescan');rescan.onclick=resumeScan;el.appendChild(rescan);el.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+var rvCurrentCode='';
+function doCheckin(code,jumlah,note){
+ code=normalizeCode(code);if(!validCode(code)||guestCount(jumlah,false)===null){reportActionError({error:'invalid'});return;}
+ if(!sessionValid()){reportActionError({error:'auth'});return;}
+ var row=findRow(code);if(row&&!attending(row.status)){reportActionError({error:'not_attending'});return;}
+ rvCurrentCode=code;
+ if(netDown()){localCheckin(code,jumlah,note);return;}
+ if(hasPending(code)){showResult(code,{ok:true,found:true,nama:row?row.nama:code,status:row?row.status:'',jumlah:jumlah,_pending:true});flushQueue();return;}
+ if(!enqueueOperation('checkin',code,jumlah,note)){reportActionError({error:'storage'});return;}
+ showResult(code,{ok:true,found:true,nama:row?row.nama:code,status:row?row.status:'',jumlah:jumlah,_pending:true});applyFilter();flushQueue();
+}
+function showUncheckSuccess(code,d){
+ var el=document.getElementById('result');el.className='result show r-warn';el.innerHTML='<div class="badge">'+esc(st('d.unchecked'))+'</div><div class="nm">'+esc(d.nama||code)+'</div><div class="code">'+esc(code)+'</div>';var b=document.createElement('button');b.className='btn';b.textContent=st('d.rescan');b.onclick=resumeScan;el.appendChild(b);
+}
+function doUncheck(code){
+ code=normalizeCode(code);if(!sessionValid()){reportActionError({error:'auth'});return;}if(!validCode(code)){reportActionError({error:'invalid'});return;}rvCurrentCode=code;
+ // Queue the inverse after earlier operations. A timed-out check-in may have reached the server.
+ if(syncQueue.some(function(x){return x.code===code&&x.state==='rejected';})){reportActionError({error:'needs_review'});return;}
+ if(syncQueue.some(function(x){return x.code===code&&x.action==='uncheck';})){updateNetBar();return;}
+ if(!enqueueOperation('uncheck',code,'','')){reportActionError({error:'storage'});return;}
+ var el=document.getElementById('result');el.className='result show r-warn';el.textContent=message('Pembatalan menunggu konfirmasi server.','Undo is awaiting server confirmation.');applyFilter();flushQueue();
+}
+function reviewCode(code){
+ code=normalizeCode(code);if(!validCode(code)){reportActionError({error:'invalid'});return;}if(!sessionValid()){reportActionError({error:'auth'});return;}
+ if(netDown()){reviewFromCache(code);return;}
+ jsonp('action=lookup&code='+encodeURIComponent(code),function(d){if(d&&['network','timeout'].includes(d.error)){reviewFromCache(code);return;}if(!d||!d.ok||!d.found){showResult(code,d||{});return;}showReview(code,d);});
+}
+function reviewFromCache(code){var r=findRow(code);if(!r){showResult(code,{ok:true,found:false,_offline:true});return;}showReview(code,{nama:r.nama,status:r.status,jumlah:r.jumlah,note:r.note,already:!!r.checkin,_offline:true});}
+function showReview(code,d){
+ rvCurrentCode=code;document.getElementById('rvName').textContent=d.nama||code;document.getElementById('rvStatus').textContent=d.status||'';document.getElementById('rvCode').textContent=code;
+ var ji=document.getElementById('rvJumlah');ji.value=d.jumlah==null?'':String(d.jumlah);ji.readOnly=true;document.getElementById('rvNote').value=d.note||'';
+ var al=document.getElementById('rvAlready');al.hidden=false;al.style.display=d.already||hasPending(code)||!attending(d.status)?'block':'none';al.textContent=!attending(d.status)?actionError({error:'not_attending'}):hasPending(code)?st('d.pendingNote'):st('s.rvAlready');
+ document.getElementById('rvConfirm').disabled=!attending(d.status)||hasPending(code)||!!d.already;document.getElementById('rvEdit').disabled=!attending(d.status)||hasPending(code)||!!d.already;
+ document.getElementById('result').className='result';var rv=document.getElementById('review');rv.className='result show';rv.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+document.getElementById('rvEdit').onclick=function(){var j=document.getElementById('rvJumlah');j.readOnly=false;j.focus();j.select();};
+document.getElementById('rvConfirm').onclick=function(){var j=document.getElementById('rvJumlah').value.trim();if(guestCount(j,false)===null){reportActionError({error:'invalid'});return;}doCheckin(rvCurrentCode,j,document.getElementById('rvNote').value.trim());};
+document.getElementById('rvCancel').onclick=resumeScan;
+document.getElementById('manualBtn').onclick=function(){initAudio();stopCamera();showCam(false);reviewCode(document.getElementById('manualCode').value);};
+document.getElementById('manualCode').addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();document.getElementById('manualBtn').click();}});
+document.getElementById('manualCode').addEventListener('input',function(){var p=this.selectionStart;this.value=this.value.toUpperCase();this.setSelectionRange(p,p);});
+
+var html5Qr=null,scanning=false,cameraStarting=false,cameraStopping=false,cameraGeneration=0,lastCode='',lastTime=0;
+function paintCamera(){document.getElementById('startBtn').disabled=cameraStarting||cameraStopping;document.getElementById('startBtn').style.display=scanning?'none':'block';document.getElementById('stopBtn').style.display=scanning?'block':'none';}
+async function stopCamera(){
+ cameraGeneration++;
+ if(cameraStarting){paintCamera();return;}
+ if(!html5Qr||!scanning||cameraStopping){paintCamera();return;}
+ cameraStopping=true;paintCamera();try{await html5Qr.stop();try{html5Qr.clear();}catch(e){}}catch(e){}finally{scanning=false;cameraStopping=false;paintCamera();}
+}
+function onScan(text){var now=Date.now();text=normalizeCode(text);if(!validCode(text))return;if(text===lastCode&&now-lastTime<2500)return;lastCode=text;lastTime=now;stopCamera();showCam(false);reviewCode(text);}
+async function startCamera(){
+ initAudio();if(!sessionValid()){reportActionError({error:'auth'});return;}if(scanning||cameraStarting||cameraStopping)return;
+ if(typeof Html5Qrcode==='undefined'){alert(st('d.alertLib'));return;}
+ cameraStarting=true;var generation=++cameraGeneration;paintCamera();
+ try{
+  var formats=typeof Html5QrcodeSupportedFormats==='undefined'?null:[Html5QrcodeSupportedFormats.QR_CODE,Html5QrcodeSupportedFormats.CODE_39];
+  html5Qr=new Html5Qrcode('reader',formats?{formatsToSupport:formats}:{});
+  await html5Qr.start({facingMode:'environment'},{fps:10,qrbox:function(w,h){var side=Math.max(50,Math.floor(Math.min(w,h)*0.72));return {width:side,height:side};}},onScan,function(){});
+  scanning=true;cameraStarting=false;
+  if(generation!==cameraGeneration||!sessionValid()||document.hidden){await stopCamera();}
+ }catch(e){cameraStarting=false;scanning=false;alert(st('d.camErr')+String(e)+st('d.camUse'));}
+ finally{paintCamera();}
+}
+function showCam(show){document.getElementById('camCard').style.display=show?'':'none';}
+function resumeScan(){document.getElementById('review').className='result';document.getElementById('result').className='result';lastCode='';showCam(true);startCamera();}
+document.getElementById('startBtn').onclick=startCamera;document.getElementById('stopBtn').onclick=stopCamera;
+document.addEventListener('visibilitychange',function(){if(document.hidden)stopCamera();});
+window.addEventListener('pagehide',stopCamera);
+
+function renderListData(d){allRows=(Array.isArray(d.rows)?d.rows:[]).slice().reverse();saveListCache();recomputeStats();applyFilter();updateNetBar();}
+function parseNum(x){var t=String(x==null?'':x).trim();return /^\d+$/.test(t)?Number(t):0;}
+function pplTxt(j){return parseNum(j)+' '+st('d.people');}
+function applyFilter(){
+ var q=(document.getElementById('search').value||'').toLowerCase().trim();var rows=allRows.filter(function(r){if(statusFilter==='no'&&r.checkin)return false;if(statusFilter==='in'&&!r.checkin)return false;return !q||String(r.nama).toLowerCase().includes(q)||String(r.kode).toLowerCase().includes(q);});
+ var list=document.getElementById('guestList');list.innerHTML=rows.length?rows.map(function(r){var code=normalizeCode(r.kode),pending=hasPending(code),bad=syncQueue.some(function(x){return x.code===code&&x.state==='rejected';});var pill=pending?message('Menunggu sinkron','Awaiting sync'):bad?message('Perlu tinjau','Needs review'):r.checkin?st('d.pillIn'):st('d.pillNo');
+  var ci=!r.checkin&&attending(r.status)&&!pending&&!bad?'<button type="button" class="gcheck" data-code="'+esc(code)+'">'+esc(st('d.listCheckin'))+'</button>':'';
+  return '<div class="guest"><div style="flex:1;min-width:0"><div class="gn">'+esc(r.nama)+'</div><div class="gc">'+esc(code)+' · '+pplTxt(r.jumlah)+' · '+esc(r.status)+'</div>'+(r.note?'<div class="gnote">'+esc(r.note)+'</div>':'')+'<div class="gact">'+ci+'<button type="button" class="gedit" data-code="'+esc(code)+'">'+esc(st('d.edit'))+'</button><button type="button" class="gdel" data-code="'+esc(code)+'">'+esc(st('d.del'))+'</button></div></div><span class="pill '+(r.checkin?'in':'no')+'">'+esc(pill)+'</span></div>';
+ }).join(''):'<div class="hint">'+esc(st('d.listEmpty'))+'</div>';
+}
+var edCode='',editBusy=false,listSequence=0;
+var MUTATION_KEY='tp27_admin_attempts:'+SHEETS_URL;
+var adminAttempts=(function(){try{var v=JSON.parse(localStorage.getItem(MUTATION_KEY)||'{}');return v&&typeof v==='object'&&!Array.isArray(v)?v:{};}catch(e){return {};}})();
+function saveAdminAttempts(){try{localStorage.setItem(MUTATION_KEY,JSON.stringify(adminAttempts));return true;}catch(e){return false;}}
+function openEdit(code){var r=findRow(code);if(!r)return;if(syncQueue.some(function(x){return x.code===code;})){reportActionError({error:'needs_review'});return;}edCode=code;document.getElementById('edName').value=r.nama||'';document.getElementById('edStatus').value=attending(r.status)?'Hadir':'Tidak Hadir';document.getElementById('edJml').value=String(r.jumlah||0);document.getElementById('edNote').value=r.note||'';document.getElementById('edMsg').textContent='';document.getElementById('editModal').style.display='flex';document.getElementById('edName').focus();}
+function closeEdit(){if(editBusy)return;document.getElementById('editModal').style.display='none';edCode='';}
+function editControls(busy){editBusy=busy;['edSave','edDelete','edCancel','edName','edStatus','edJml','edNote'].forEach(function(id){document.getElementById(id).disabled=busy;});}
+function adminMutation(action,code,fields,cb){
+ if(!sessionValid()){cb({ok:false,error:'auth'});return;}if(netDown()){cb({ok:false,error:'network'});return;}
+ var payload=Object.assign({action:action,code:code},fields||{}),fingerprint=JSON.stringify(payload),previous=adminAttempts[code];
+ if(previous&&previous.fingerprint!==fingerprint){cb({ok:false,error:'needs_review'});return;}
+ var id=previous?previous.id:freshId();adminAttempts[code]={id:id,fingerprint:fingerprint};if(!saveAdminAttempts()){cb({ok:false,error:'storage'});return;}
+ var p=new URLSearchParams(Object.assign({opId:id},payload));
+ jsonp(p.toString(),function(d){
+  if(d&&d.ok&&(!d.found||d.opId!==id||d.code!==code))d={ok:false,error:d.found===false?'not_found':'unverified'};
+  if(d&&(d.ok||['invalid','not_attending','not_found','auth'].includes(d.error))){delete adminAttempts[code];saveAdminAttempts();}
+  updateNetBar();cb(d||{ok:false,error:'failed'});
+ });
+}
+document.getElementById('edCancel').onclick=closeEdit;
+document.getElementById('edSave').onclick=function(){
+ if(editBusy||!edCode)return;var name=document.getElementById('edName').value.trim(),status=document.getElementById('edStatus').value,n=guestCount(document.getElementById('edJml').value,status!=='Hadir');
+ if(!name||name.length>100||n===null){document.getElementById('edMsg').textContent=actionError({error:'invalid'});return;}
+ var code=edCode;editControls(true);document.getElementById('edMsg').textContent=message('Menyimpan…','Saving…');
+ adminMutation('edit',code,{nama:name,status:status,jumlah:String(n),catatan:document.getElementById('edNote').value.trim()},function(d){editControls(false);if(!d.ok){document.getElementById('edMsg').textContent=actionError(d);return;}closeEdit();loadList();});
+};
+function deleteGuest(code,cb){if(syncQueue.some(function(x){return x.code===code;})){cb({ok:false,error:'needs_review'});return;}adminMutation('delete',code,{},cb);}
+document.getElementById('edDelete').onclick=function(){if(editBusy||!edCode||!confirm(st('d.confirmDel')))return;editControls(true);deleteGuest(edCode,function(d){editControls(false);if(!d.ok){document.getElementById('edMsg').textContent=actionError(d);return;}closeEdit();loadList();});};
+document.getElementById('guestList').onclick=function(e){var b=e.target.closest('button');if(!b)return;var code=b.dataset.code;if(!code)return;if(b.classList.contains('gcheck')){stopCamera();showCam(false);reviewCode(code);}else if(b.classList.contains('gedit'))openEdit(code);else if(b.classList.contains('gdel')&&confirm(st('d.confirmDel'))){b.disabled=true;deleteGuest(code,function(d){b.disabled=false;if(!d.ok){reportActionError(d);return;}loadList();});}};
+function loadHistory(){if(!sessionValid())return;jsonp('action=history',function(d){var el=document.getElementById('histList');if(!d||!d.ok){el.textContent=actionError(d);return;}el.innerHTML=(d.rows||[]).map(function(r){return '<div class="histrow"><div>'+esc(r.aksi)+' · '+esc(r.nama||r.kode)+' '+esc(r.detail)+'</div><div class="ht">'+esc(r.waktu)+'</div></div>';}).join('')||esc(st('d.histEmpty'));});}
+document.getElementById('histBtn').onclick=loadHistory;
+function loadList(){
+ if(!sessionValid())return;listShown=true;var seq=++listSequence;
+ jsonp('action=list',function(d){if(seq!==listSequence||!sessionValid())return;if(!d||!d.ok){if(d&&['network','timeout'].includes(d.error)){var c=loadListCache();if(c){allRows=c.rows.slice();recomputeStats();applyFilter();}}else document.getElementById('guestList').textContent=actionError(d);return;}renderListData(d);});
+}
+document.getElementById('refreshBtn').onclick=loadList;
+document.getElementById('search').oninput=function(){if(listShown)applyFilter();};
+document.querySelectorAll('.fbtn').forEach(function(b){b.onclick=function(){statusFilter=b.dataset.filter;document.querySelectorAll('.fbtn').forEach(function(x){x.classList.toggle('on',x===b);});if(listShown)applyFilter();};});
+function exportCSV(){
+ if(!sessionValid()||!allRows.length)return;
+ function q(v){v=String(v==null?'':v);if(/^[=+\-@\t\r\n\uFF1D\uFF0B\uFF0D\uFF20]/.test(v))v="'"+v;return '"'+v.replace(/"/g,'""')+'"';}
+ var rows=[['Kode','Nama','Kehadiran','JumlahTamu','CheckIn','Catatan','Sinkronisasi']];allRows.forEach(function(r){rows.push([r.kode,r.nama,r.status,r.jumlah,r.checkin||'',r.note||'',hasPending(normalizeCode(r.kode))?'Menunggu sinkron':'Server']);});
+ var blob=new Blob(['\ufeff'+rows.map(function(r){return r.map(q).join(',');}).join('\r\n')],{type:'text/csv;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='checkin-'+new Date().toISOString().slice(0,10)+'.csv';document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(url);a.remove();},1000);
+}
+document.getElementById('exportBtn').onclick=exportCSV;
+function enterApp(){document.getElementById('login').style.display='none';document.getElementById('app').style.display='block';document.getElementById('pinInput').value='';showCam(true);initNetBar();}
+document.getElementById('pinBtn').onclick=async function(){
+ if(loginBusy)return;loginBusy=true;this.disabled=true;initAudio();PIN=document.getElementById('pinInput').value.trim();var msg=document.getElementById('pinMsg');msg.textContent='…';
+ if(!PIN){msg.textContent=st('s.pinWrong');loginBusy=false;this.disabled=false;return;}
+ jsonp('action=list',async function(d){
+  try{
+   if(d&&d.ok){if(d.protocol!=='scanner-v14'){msg.textContent=actionError({error:'transport'});PIN='';return;}await rememberSession();document.getElementById('cfgWarn').style.display='none';enterApp();renderListData(d);flushQueue();return;}
+   if(d&&['network','timeout'].includes(d.error)){
+    var cache=loadListCache();if(cache&&await allowOfflineLogin(PIN)){enterApp();allRows=cache.rows.slice();listShown=true;isOnline=false;recomputeStats();applyFilter();updateNetBar();return;}
+    msg.textContent=message('Login offline memerlukan sesi terverifikasi pada tab ini dan PIN yang benar. Sambungkan internet.','Offline sign-in requires a verified session in this tab and the correct PIN. Connect to the internet.');
+   }else{msg.textContent=actionError(d);}
+   PIN='';
+  }finally{loginBusy=false;document.getElementById('pinBtn').disabled=false;}
+ });
+};
+document.getElementById('pinInput').onkeydown=function(e){if(e.key==='Enter'){e.preventDefault();document.getElementById('pinBtn').click();}};
+
+/* ===== INIT ===== */
+applyScanLang('id');
+if(SHEETS_URL){ document.getElementById('login').style.display='block'; }
+else { document.getElementById('app').style.display='block'; document.getElementById('cfgWarn').style.display='block'; initNetBar(); }
+
+/* Sinkron otomatis: saat koneksi kembali, saat tab kembali aktif, & berkala. */
+window.addEventListener('online',  function(){ setOnline(true); });
+window.addEventListener('offline', function(){ setOnline(false); });
+document.addEventListener('visibilitychange', function(){ if(!document.hidden && syncQueue.length) syncNow(); });
+setInterval(function(){if(authenticated&&!sessionValid()){stopCamera();authenticated=false;clearOfflineSession();document.getElementById('app').style.display='none';document.getElementById('login').style.display='block';}if(syncQueue.length)syncNow();},20000);
+</script>
+</body>
+</html>
