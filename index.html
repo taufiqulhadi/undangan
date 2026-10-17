@@ -432,7 +432,7 @@ fieldset.field{border:0;min-width:0}fieldset.field legend{font-size:13px;font-we
   <div id="personalNote" class="pcard">
     <div class="motif" style="max-width:120px;margin:0 auto 12px"></div>
     <p class="muted" data-i18n="pi.lead" style="font-style:italic;margin:0 0 4px">Dengan penuh suka cita kami mengundang</p>
-    <p id="piName" class="pi-name">Bapak/Ibu/Saudara/i</p>
+    <p id="piName" class="pi-name" data-i18n="pi.guest">Bapak/Ibu/Saudara/i</p>
     <p data-i18n="pi.body" style="max-width:520px;margin:0 auto;font-style:italic;color:var(--soft)">untuk berkenan hadir dan memberikan doa restu pada hari bahagia kami. Kehadiran Anda merupakan kebahagiaan sekaligus kehormatan bagi kami.</p>
     <div class="motif" style="max-width:90px;margin:18px auto 0"></div>
   </div>
@@ -443,7 +443,7 @@ fieldset.field{border:0;min-width:0}fieldset.field legend{font-size:13px;font-we
   <div class="c cP" id="cardCouple"><span class="lab" data-i18n="b.couple">Mempelai</span><div class="mono">T &amp; P</div></div>
   <div class="c cDate"><span class="lab" data-i18n="b.day">Hari Pernikahan</span><div><div class="big">21</div><div data-i18n="b.month">Maret 2027</div></div><span class="lab" data-i18n="b.dow">Ahad</span></div>
   <div class="c cG" id="cardWalimah"><span class="lab" data-i18n="b.walimah">Walimatul 'Urusy</span><div class="mono">Taufiq<br>&amp; Putri</div></div>
-  <div class="c cLoc"><span class="lab" data-i18n="b.loc">Lokasi</span><div class="v">Gedung Serbaguna SMKN 2 Padang</div><span class="lab">Padang, Sumatera Barat</span></div>
+  <div class="c cLoc"><span class="lab" data-i18n="b.loc">Lokasi</span><div class="v">Gedung Serbaguna SMKN 2 Padang</div><span class="lab" data-i18n="b.city">Padang, Sumatera Barat</span></div>
 </div></div>
 
 <!-- MEMPELAI -->
@@ -451,10 +451,10 @@ fieldset.field{border:0;min-width:0}fieldset.field legend{font-size:13px;font-we
   <div class="shead"><span class="kicker c" data-i18n="m.kicker">Mempelai</span></div>
   <div class="mp-couple" style="text-align:center;max-width:560px;margin:0 auto">
     <div class="names" style="font-family:var(--serif);font-size:clamp(30px,8vw,46px);color:var(--marun);line-height:1.1">Taufiqulhadi</div>
-    <p class="muted" style="margin-top:6px"><span data-i18n="m.son">Putra dari</span><br>Bapak H. Iswandi, S.E. &amp; Ibu Hj. Sutarni</p>
+    <p class="muted" style="margin-top:6px"><span data-i18n="m.son">Putra dari</span><br><span data-i18n="m.sonParents">Bapak H. Iswandi, S.E. &amp; Ibu Hj. Sutarni</span></p>
     <div style="font-family:var(--serif);font-size:32px;color:var(--emas);font-style:italic;margin:14px 0">&amp;</div>
     <div class="names" style="font-family:var(--serif);font-size:clamp(30px,8vw,46px);color:var(--marun);line-height:1.1">Yolla Yulia Putri</div>
-    <p class="muted" style="margin-top:6px"><span data-i18n="m.daughter">Putri dari</span><br>Bapak Liamat &amp; Ibu Maisuarniati</p>
+    <p class="muted" style="margin-top:6px"><span data-i18n="m.daughter">Putri dari</span><br><span data-i18n="m.daughterParents">Bapak Liamat &amp; Ibu Maisuarniati</span></p>
   </div>
 </div></section>
 
@@ -567,10 +567,10 @@ fieldset.field{border:0;min-width:0}fieldset.field legend{font-size:13px;font-we
   <div>
     <span class="kicker">RSVP</span>
     <h2 data-i18n="r.h2">Konfirmasi Kehadiran Anda</h2>
-    <p class="muted"><span data-i18n="r.p1">Kami sangat berharap dapat merayakan hari bahagia ini bersama Anda. Mohon konfirmasi kehadiran paling lambat</span> <b>18 <span data-i18n="r.mar">Maret</span> 2027</b>.</p>
-    <p id="rsvpHello" class="muted" style="font-family:var(--serif);font-size:18px;color:var(--marun);font-style:italic;margin:6px 0 10px"><span data-i18n="pi.hello">Halo,</span> <b id="rsvpHelloName">Bapak/Ibu/Saudara/i</b> &#8212; <span data-i18n="pi.helloMsg">kami menanti kehadiran Anda.</span> &#129293;</p>
+    <p class="muted"><span data-i18n="r.p1">Kami sangat berharap dapat merayakan hari bahagia ini bersama Anda. Mohon konfirmasi kehadiran paling lambat</span> <b>18 <span data-i18n="r.mar">Maret</span> 2027 <span data-i18n="r.deadlineTime">pukul 23.59 WIB</span></b>.</p>
+    <p id="rsvpHello" class="muted" style="font-family:var(--serif);font-size:18px;color:var(--marun);font-style:italic;margin:6px 0 10px"><span data-i18n="pi.hello">Halo,</span> <b id="rsvpHelloName" data-i18n="pi.guest">Bapak/Ibu/Saudara/i</b> &#8212; <span data-i18n="pi.helloMsg">kami menanti kehadiran Anda.</span> &#129293;</p>
     <div class="info">
-      <div class="i"><div class="ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#6E1423" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M3 9h18M8 2.5v4M16 2.5v4"/></svg></div><div><b data-i18n="r.iBatas">Batas Konfirmasi</b><span>18 <span data-i18n="r.mar">Maret</span> 2027</span></div></div>
+      <div class="i"><div class="ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#6E1423" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M3 9h18M8 2.5v4M16 2.5v4"/></svg></div><div><b data-i18n="r.iBatas">Batas Konfirmasi</b><span>18 <span data-i18n="r.mar">Maret</span> 2027 <span data-i18n="r.deadlineTime">pukul 23.59 WIB</span></span></div></div>
       <div class="i"><div class="ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#6E1423" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 19a6.5 6.5 0 0 1 13 0"/><path d="M16 5.2a3.2 3.2 0 0 1 0 6"/><path d="M16.5 13.4A6.5 6.5 0 0 1 21.5 19"/></svg></div><div><b data-i18n="r.iKap">Kapasitas Tamu</b><span data-i18n="r.iKapS">Terbatas, harap konfirmasi segera</span></div></div>
       <div class="i"><div class="ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#6E1423" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s6.5-5.2 6.5-10.5a6.5 6.5 0 1 0-13 0C5.5 15.8 12 21 12 21Z"/><circle cx="12" cy="10.5" r="2.5"/></svg></div><div><b data-i18n="r.iLok">Lokasi</b><span>Gedung Serbaguna SMKN 2 Padang</span></div></div>
     </div>
@@ -650,7 +650,7 @@ fieldset.field{border:0;min-width:0}fieldset.field legend{font-size:13px;font-we
         <a class="btn ghost" id="calBtn" target="_blank" rel="noopener" href="#" data-i18n="l.cal">Tambah ke Kalender</a>
       </div>
     </div>
-    <div class="map" id="venueMap"><div class="map-fallback" role="region" aria-label="Alamat Gedung Pernikahan" data-i18n-aria="l.fallbackAria"><span class="kicker" data-i18n="l.mapFallbackKicker">Alamat Acara</span><h3>Gedung Serbaguna SMKN 2 Padang</h3><p data-i18n="l.fullAddress">Jl. dr. Sutomo No. 5, Simpang Haru, Padang Timur</p><p data-i18n="l.region">Padang, Sumatera Barat</p><p data-i18n="l.mapFallbackHint">Peta tidak tersedia? Gunakan tombol Google Maps atau Waze.</p></div><a class="mapopen" target="_blank" rel="noopener" href="https://maps.app.goo.gl/dBU8LyQ4RcgMVdsJ8" data-i18n="l.openmap">Buka Peta</a><iframe title="Peta lokasi pernikahan / Wedding venue map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Gedung%20Serbaguna%20SMKN%202%20Padang%2C%20Padang&z=15&output=embed"></iframe></div>
+    <div class="map" id="venueMap"><div class="map-fallback" role="region" aria-label="Alamat Gedung Pernikahan" data-i18n-aria="l.fallbackAria"><span class="kicker" data-i18n="l.mapFallbackKicker">Alamat Acara</span><h3>Gedung Serbaguna SMKN 2 Padang</h3><p data-i18n="l.fullAddress">Jl. dr. Sutomo No. 5, Simpang Haru, Padang Timur</p><p data-i18n="l.region">Padang, Sumatera Barat</p><p data-i18n="l.mapFallbackHint">Peta tidak tersedia? Gunakan tombol Google Maps atau Waze.</p></div><a class="mapopen" target="_blank" rel="noopener" href="https://maps.app.goo.gl/dBU8LyQ4RcgMVdsJ8" data-i18n="l.openmap">Buka Peta</a><iframe title="Peta lokasi pernikahan" data-i18n-title="l.mapTitle" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Gedung%20Serbaguna%20SMKN%202%20Padang%2C%20Padang&z=15&output=embed"></iframe></div>
   </div>
 </div></section>
 
@@ -658,7 +658,7 @@ fieldset.field{border:0;min-width:0}fieldset.field legend{font-size:13px;font-we
   <div class="logo">Taufiq <span class="hd">&#9829;</span> Putri</div>
   <div class="muted" style="color:rgba(255,255,255,.7)" data-i18n="f.line">Merupakan suatu kehormatan apabila Anda berkenan hadir &amp; memberi doa restu</div>
   <div class="tag">#TaufiqPutriMelabuh</div>
-  <div class="cp">© 2027 Taufiqulhadi &amp; Yolla Yulia Putri · 21 Maret 2027</div>
+  <div class="cp" data-i18n="f.copyright">© 2027 Taufiqulhadi &amp; Yolla Yulia Putri · 21 Maret 2027</div>
 </footer>
 <dialog class="lb" id="lightbox" aria-labelledby="lbCount">
   <button type="button" class="lbb x" id="lbClose"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
@@ -713,7 +713,7 @@ var PHOTO_WALIMAH="foto/pasangan-putih.webp";  // foto latar kartu "Walimatul 'U
 var I18N={
  id:{ "nav.home":"Beranda","nav.story":"Love Story","nav.detail":"Detail","nav.cd":"Hitung Mundur","nav.rsvp":"RSVP","nav.gift":"Hadiah","nav.loc":"Lokasi","nav.rsvpbtn":"RSVP",
   "hero.kicker":"Undangan Pernikahan","pi.lead":"Dengan penuh suka cita kami mengundang","pi.body":"untuk berkenan hadir dan memberikan doa restu pada hari bahagia kami. Kehadiran Anda merupakan kebahagiaan sekaligus kehormatan bagi kami.","pi.hello":"Halo,","pi.helloMsg":"kami menanti kehadiran Anda.","nav.couple":"Mempelai","nav.gallery":"Galeri","m.kicker":"Mempelai","m.son":"Putra dari","m.daughter":"Putri dari","g2.kicker":"Galeri","g2.h2":"Momen Kami","l.cal":"Tambah ke Kalender","l.openmap":"Buka Peta","cd.today":"Hari ini — hari bahagia kami! 🎉","cd.passed":"Acara telah berlangsung. Terima kasih! 🤍","music.play":"Putar musik","music.pause":"Jeda musik","hero.date":"Ahad, 21 Maret 2027","hero.cta1":"Konfirmasi Kehadiran →","hero.cta2":"Lihat Detail","op.bismTr":"Dengan nama Allah Yang Maha Pengasih lagi Maha Penyayang.","op.salamTr":"Semoga keselamatan, rahmat Allah, serta keberkahan-Nya senantiasa tercurah untuk Anda.","op.verse":"Di antara tanda-tanda kebesaran Allah ialah diciptakan-Nya pasangan-pasangan bagi kita dari jenis kita sendiri, agar hati merasa tenteram di sisinya, serta ditumbuhkan-Nya rasa cinta dan kasih sayang di antara keduanya.","op.verseRef":"— Q.S. Ar-Rum: 21 —","op.intro":"Dengan memohon rahmat dan ridha Allah Subhanahu wa Ta’ala, kami bermaksud menyelenggarakan pernikahan putra-putri kami.",
-  "b.couple":"Mempelai","b.day":"Hari Pernikahan","b.month":"Maret 2027","b.dow":"Ahad","b.walimah":"Walimatul 'Urusy","b.loc":"Lokasi",
+  "b.couple":"Mempelai","b.day":"Hari Pernikahan","b.month":"Maret 2027","b.dow":"Ahad","b.walimah":"Walimatul 'Urusy","b.loc":"Lokasi","b.city":"Padang, Sumatera Barat","m.sonParents":"Bapak H. Iswandi, S.E. & Ibu Hj. Sutarni","m.daughterParents":"Bapak Liamat & Ibu Maisuarniati","f.copyright":"© 2027 Taufiqulhadi & Yolla Yulia Putri · 21 Maret 2027","pi.guest":"Bapak/Ibu/Saudara/i","r.deadlineTime":"pukul 23.59 WIB","l.mapTitle":"Peta lokasi pernikahan",
   "story.kicker":"Kisah Kami","story.p":"Sepenggal kisah perjalanan kami menuju hari bahagia — kami rangkum dalam video singkat.","story.play":"Putar Video",
   "d.kicker":"Informasi Acara","d.h2":"Detail Pernikahan","d.dress":"Dress Code","d.rundown":"Rundown",
   "dr.h3":"Dress Code","dr.p":"Kami mengundang Bapak/Ibu/Saudara/i untuk berkenan mengenakan busana dengan nuansa:","dr.noteT":"Catatan Penting","dr.noteB":"Mohon menghindari warna putih dominan, warna neon, dan busana bermotif terlalu kontras.",
@@ -730,7 +730,7 @@ var I18N={
  },
  en:{ "nav.home":"Home","nav.story":"Love Story","nav.detail":"Details","nav.cd":"Countdown","nav.rsvp":"RSVP","nav.gift":"Gift","nav.loc":"Location","nav.rsvpbtn":"RSVP",
   "hero.kicker":"Wedding Invitation","pi.lead":"With heartfelt joy, we cordially invite","pi.body":"to kindly join us and share your blessings on our special day. Your presence would be both a joy and an honour to us.","pi.hello":"Hello,","pi.helloMsg":"we look forward to your presence.","nav.couple":"Couple","nav.gallery":"Gallery","m.kicker":"The Couple","m.son":"The son of","m.daughter":"The daughter of","g2.kicker":"Gallery","g2.h2":"Our Moments","l.cal":"Add to Calendar","l.openmap":"Open Map","cd.today":"Today — our big day! 🎉","cd.passed":"The event has taken place. Thank you! 🤍","music.play":"Play music","music.pause":"Pause music","hero.date":"Sunday, 21 March 2027","hero.cta1":"Confirm Attendance →","hero.cta2":"View Details","op.bismTr":"In the name of Allah, the Most Gracious, the Most Merciful.","op.salamTr":"May the peace, mercy, and blessings of Allah be upon you.","op.verse":"Among the signs of God’s greatness is that He created mates for you from among yourselves, so that you may find tranquillity in them, and He placed love and mercy between you.","op.verseRef":"— Quran, Ar-Rum: 21 —","op.intro":"With the grace and blessing of Allah Subhanahu wa Ta’ala, we joyfully present the wedding of our beloved children.",
-  "b.couple":"The Couple","b.day":"Wedding Day","b.month":"March 2027","b.dow":"Sunday","b.walimah":"The Wedding","b.loc":"Location",
+  "b.couple":"The Couple","b.day":"Wedding Day","b.month":"March 2027","b.dow":"Sunday","b.walimah":"The Wedding","b.loc":"Location","b.city":"Padang, West Sumatra","m.sonParents":"Mr. H. Iswandi, S.E. & Mrs. Hj. Sutarni","m.daughterParents":"Mr. Liamat & Mrs. Maisuarniati","f.copyright":"© 2027 Taufiqulhadi & Yolla Yulia Putri · 21 March 2027","pi.guest":"Guest","r.deadlineTime":"at 23:59 WIB","l.mapTitle":"Wedding venue map",
   "story.kicker":"Our Story","story.p":"A glimpse of our journey to this special day — captured in a short video.","story.play":"Play Video",
   "d.kicker":"Event Information","d.h2":"Wedding Details","d.dress":"Dress Code","d.rundown":"Rundown",
   "dr.h3":"Dress Code","dr.p":"We warmly invite you to wear attire in the following tones:","dr.noteT":"Important Note","dr.noteB":"Please avoid predominantly white outfits, neon colours, and attire with overly contrasting patterns.",
@@ -741,13 +741,13 @@ var I18N={
   "r.h2":"Confirm Your Attendance","r.p1":"We truly hope to celebrate this joyful day with you. Kindly confirm your attendance no later than","r.feb":"February","r.iBatas":"Confirmation Deadline","r.iKap":"Guest Capacity","r.iKapS":"Limited — please confirm soon","r.iLok":"Location","rsvp.closedT":"Our Apologies","rsvp.closed":"We are sorry \u2014 the RSVP period has now closed. Registered guests can still use “View my ticket”.",
   "r.fName":"Full Name","r.fNamePh":"Enter your name","r.fAtt":"Attendance","att.yes":"Joyfully Attending","att.no":"Unable to Attend","r.fNum":"Number of Guests","r.fWa":"WhatsApp Number","r.fWaH":"(for the thank-you message)","r.fWaPh":"08xxxxxxxxxx","r.p1o":"1 Person","r.p2o":"2 People","r.p3o":"3 People","r.p4o":"4 People","r.p5o":"5 People","r.fMsg":"Wishes & Prayers","r.opt":"(optional)","r.fMsgPh":"Write your best wishes and prayers for the couple...","r.send":"Send Confirmation →","r.reset":"Fill as a different guest","r.waSug":"We recommend adding your WhatsApp number so we can send you a thank-you message.","r.waSugRev":"Without a WhatsApp number we can\u2019t send a thank-you message. You can still continue.",
   "a11y.skip":"Skip to content","res.thanks":"Thank You","res.bc":"Check-in Barcode","res.save":"Save this e-ticket (button below) or screenshot it. Show it at check-in — it works even if you switch phones.","res.wa":"Send via WhatsApp","res.rem":"⏰ Remind via WhatsApp","res.dl":"⬇ Save E-Ticket","res.edit":"↺ Edit Details","res.cal":"Add to Calendar","rev.title":"Review Your Details","rev.sub":"Please make sure the details below are correct before sending.","rev.ok":"✓ Looks Good, Send","rev.edit":"↺ Edit Details","rev.lName":"Name","rev.lAtt":"Attendance","rev.lNum":"Guests","rev.lWa":"WhatsApp","rev.lMsg":"Wishes","res.sending":"Sending…","res.saved":"✓ Confirmation saved","res.savedWarn":"⚠ May not be saved — check your connection or contact the host.","res.msgYes":"We are so happy you will be there. See you on our big day 🎉","res.msgNo":"Thank you for letting us know. We still keep you in our best prayers.",
-  "l.kicker":"Location","l.h2":"Find Us Here","l.date":"Date","l.dateV":"Sunday, 21 March 2027","l.time":"Akad 08.00 · Reception guests are welcome from 10.30 to 16.00 WIB","l.addr":"Address","l.info":"Information","l.infoS":"Contact the host for more info","l.maps":"Open in Google Maps","l.waze":"Open in Waze",
+  "l.kicker":"Location","l.h2":"Find Us Here","l.date":"Date","l.dateV":"Sunday, 21 March 2027","l.time":"Marriage vows 08.00 · Reception guests are welcome from 10.30 to 16.00 WIB","l.addr":"Address","l.info":"Information","l.infoS":"Contact the host for more info","l.maps":"Open in Google Maps","l.waze":"Open in Waze",
   "f.line":"It would be an honour if you could attend and bless us with your prayers",
   "copied":"Copied!"
  }
 };
 Object.assign(I18N.id, {
- 'music.hint':'Musik tidak diputar otomatis. Ketuk ikon not musik untuk memutarnya.','nav.quick':'Navigasi cepat','l.mapFallbackKicker':'Alamat Acara','l.mapFallbackHint':'Peta tidak tersedia? Gunakan tombol Google Maps atau Waze.','l.fallbackAria':'Alamat Gedung Pernikahan','l.fullAddress':'Jl. dr. Sutomo No. 5, Simpang Haru, Padang Timur','l.region':'Padang, Sumatera Barat','l.time':'Akad 08.00 · Tamu resepsi dapat hadir pukul 10.30–16.00 WIB','d.dress':'Kode Busana','d.rundown':'Susunan Acara','dr.h3':'Kode Busana','ru.note':'Tamu resepsi dipersilakan hadir mulai pukul 10.30 hingga acara ditutup pukul 16.00 WIB. Waktu sholat menyesuaikan jadwal resmi Kemenag Kota Padang pada hari acara.','col.marun':'Marun','col.emerald':'Zamrud','col.champagne':'Champagne','col.navy':'Navy','col.utama':'Warna utama','col.pendamping':'Warna pendamping','col.aksen':'Warna aksen','cd.days':'Hari','cd.hours':'Jam','cd.min':'Menit','cd.sec':'Detik','l.openmap':'Buka di Google Maps',
+ 'music.hint':'Musik tidak diputar otomatis. Ketuk ikon not musik untuk memutarnya.','nav.quick':'Navigasi cepat','l.mapFallbackKicker':'Alamat Acara','l.mapFallbackHint':'Peta tidak tersedia? Gunakan tombol Google Maps atau Waze.','l.fallbackAria':'Alamat Gedung Pernikahan','l.mapTitle':'Peta lokasi pernikahan','l.fullAddress':'Jl. dr. Sutomo No. 5, Simpang Haru, Padang Timur','l.region':'Padang, Sumatera Barat','l.time':'Akad 08.00 · Tamu resepsi dapat hadir pukul 10.30–16.00 WIB','d.dress':'Kode Busana','d.rundown':'Susunan Acara','dr.h3':'Kode Busana','ru.note':'Tamu resepsi dipersilakan hadir mulai pukul 10.30 hingga acara ditutup pukul 16.00 WIB. Waktu sholat menyesuaikan jadwal resmi Kemenag Kota Padang pada hari acara.','col.marun':'Marun','col.emerald':'Zamrud','col.champagne':'Champagne','col.navy':'Navy','col.utama':'Warna utama','col.pendamping':'Warna pendamping','col.aksen':'Warna aksen','cd.days':'Hari','cd.hours':'Jam','cd.min':'Menit','cd.sec':'Detik','l.openmap':'Buka di Google Maps',
  'gal.alt':'Foto prewedding Taufiqulhadi dan Yolla Yulia Putri','gal.of':'dari','gal.open':'Perbesar foto',
  'gal.close':'Tutup','gal.prev':'Foto sebelumnya','gal.next':'Foto berikutnya',
  'nav.dermaga':'Tiga Dermaga','dm.kicker':'Tiga Budaya','dm.h2':'Tiga Dermaga',
@@ -761,7 +761,7 @@ Object.assign(I18N.id, {
  'ru.note':'Waktu sholat menyesuaikan jadwal resmi Kemenag Kota Padang pada hari acara.',
  'hero.story':'Tiga budaya, satu pelabuhan.', 'hero.short':'Konfirmasi', 'host.contact':'Hubungi tuan rumah',
  'r.p1':'Kami menanti kehadiran Anda. Untuk membantu persiapan, mohon konfirmasi paling lambat',
- 'r.iBatas':'Batas Konfirmasi', 'r.mar':'Maret', 'r.send':'Tinjau Konfirmasi →',
+ 'r.iBatas':'Batas Konfirmasi', 'r.mar':'Maret', 'r.deadlineTime':'pukul 23.59 WIB', 'r.send':'Tinjau Konfirmasi →',
  'res.retry':'Coba kirim lagi', 'res.savedWarn':'Penyimpanan belum terverifikasi. Coba lagi atau konfirmasi melalui WhatsApp.',
  'res.failed':'Konfirmasi belum diterima. Periksa data atau hubungi tuan rumah.',
  'res.rem':'Bagikan pengingat', 'res.pending':'Menunggu konfirmasi penyimpanan.',
@@ -769,7 +769,7 @@ Object.assign(I18N.id, {
  'res.copyError':'Belum tersalin. Silakan pilih dan salin teks secara manual.'
 });
 Object.assign(I18N.en, {
- 'music.hint':'Music does not play automatically. Tap the music note button to play it.','nav.quick':'Quick navigation','l.mapFallbackKicker':'Venue Address','l.mapFallbackHint':'Map unavailable? Use the Google Maps or Waze button.','l.fallbackAria':'Wedding venue address','l.fullAddress':'Jl. dr. Sutomo No. 5, Simpang Haru, Padang Timur','l.region':'Padang, West Sumatra','l.time':'Akad 08.00 · Reception guests are welcome from 10.30 to 16.00 WIB','d.dress':'Dress Code','d.rundown':'Order of Events','dr.h3':'Dress Code','ru.note':'Reception guests are welcome from 10.30 until the event closes at 16.00 WIB. Prayer times follow the official Ministry of Religious Affairs schedule for Padang on the day.','col.marun':'Maroon','col.emerald':'Emerald','col.champagne':'Champagne','col.navy':'Navy','col.utama':'Primary colour','col.pendamping':'Secondary colour','col.aksen':'Accent colour','cd.days':'Days','cd.hours':'Hours','cd.min':'Minutes','cd.sec':'Seconds','l.openmap':'Open in Google Maps',
+ 'music.hint':'Music does not play automatically. Tap the music note button to play it.','nav.quick':'Quick navigation','l.mapFallbackKicker':'Venue Address','l.mapFallbackHint':'Map unavailable? Use the Google Maps or Waze button.','l.fallbackAria':'Wedding venue address','l.mapTitle':'Wedding venue map','l.fullAddress':'Jl. dr. Sutomo No. 5, Simpang Haru, Padang Timur','l.region':'Padang, West Sumatra','l.time':'Marriage vows 08.00 · Reception guests are welcome from 10.30 to 16.00 WIB','d.dress':'Dress Code','d.rundown':'Order of Events','dr.h3':'Dress Code','ru.note':'Reception guests are welcome from 10.30 until the event closes at 16.00 WIB. Prayer times follow the official Ministry of Religious Affairs schedule for Padang on the day.','col.marun':'Maroon','col.emerald':'Emerald','col.champagne':'Champagne','col.navy':'Navy','col.utama':'Primary colour','col.pendamping':'Secondary colour','col.aksen':'Accent colour','cd.days':'Days','cd.hours':'Hours','cd.min':'Minutes','cd.sec':'Seconds','l.openmap':'Open in Google Maps','g.anM':'Account name: Taufiqulhadi','g.anB':'Account name: Yolla Yulia Putri','g.an':'Account name: Taufiqulhadi',
  'gal.alt':'Pre-wedding photo of Taufiqulhadi and Yolla Yulia Putri','gal.of':'of','gal.open':'Enlarge photo',
  'gal.close':'Close','gal.prev':'Previous photo','gal.next':'Next photo',
  'nav.dermaga':'Three Harbours','dm.kicker':'Three Cultures','dm.h2':'Three Harbours',
@@ -783,7 +783,7 @@ Object.assign(I18N.en, {
  'ru.note':'Prayer times follow the official Ministry of Religious Affairs schedule for Padang on the day.',
  'hero.story':'Three cultures, one shared journey.', 'hero.short':'Confirm', 'host.contact':'Contact the host',
  'r.p1':'We look forward to celebrating with you. To help us prepare, please reply by',
- 'r.iBatas':'Reply by', 'r.mar':'March', 'r.send':'Review Confirmation →',
+ 'r.iBatas':'Reply by', 'r.mar':'March', 'r.deadlineTime':'at 23:59 WIB', 'r.send':'Review Confirmation →',
  'res.retry':'Try sending again', 'res.savedWarn':'Saving is not yet verified. Retry or confirm via WhatsApp.',
  'res.failed':'Your confirmation was not accepted. Check your details or contact the host.',
  'res.rem':'Share a reminder', 'res.pending':'Waiting for confirmation of saving.',
@@ -797,9 +797,10 @@ I18N.id['r.privacy']='Data digunakan untuk mengelola kehadiran dan ucapan terima
 I18N.en['r.privacy']='Your details are used to manage attendance and thank-you messages. This browser stores ticket access; use a personal device and download your ticket.';
 var curLang="id";
 function applyLang(l){
-  curLang=l; document.documentElement.lang=l;
+  curLang=l; document.documentElement.lang=l; try{localStorage.setItem('tp27_language',l);}catch(e){}
   document.querySelectorAll('[data-i18n]').forEach(function(e){var k=e.getAttribute('data-i18n');if(I18N[l][k]!=null)e.textContent=I18N[l][k];});
   document.querySelectorAll('[data-i18n-aria]').forEach(function(e){var k=e.getAttribute('data-i18n-aria');if(I18N[l][k]!=null)e.setAttribute('aria-label',I18N[l][k]);});
+  document.querySelectorAll('[data-i18n-title]').forEach(function(e){var k=e.getAttribute('data-i18n-title');if(I18N[l][k]!=null)e.setAttribute('title',I18N[l][k]);});
   document.querySelectorAll('[data-i18n-ph]').forEach(function(e){var k=e.getAttribute('data-i18n-ph');if(I18N[l][k]!=null)e.placeholder=I18N[l][k];});
   document.querySelectorAll('.lang button').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-lang')===l);b.setAttribute('aria-pressed',String(b.getAttribute('data-lang')===l));});buildGuestOptions();if(window._bgmPaint)window._bgmPaint();if(typeof review!=='undefined'&&review&&review.classList.contains('show'))populateReview();
   renderRundown();
@@ -1081,7 +1082,7 @@ function buildGuestOptions(){var sel=document.getElementById('jumlah');if(!sel)r
 /* normalisasi nomor WA */
 function normNum(n){n=String(n==null?'':n).replace(/[^0-9]/g,'');if(!n)return '';if(n.charAt(0)==='0')n='62'+n.substring(1);else if(n.substring(0,2)!=='62'&&n.charAt(0)==='8')n='62'+n;return n;}
 /* tambah ke kalender */
-function calUrl(){var det=(curLang==='en'?'Wedding of Taufiqulhadi & Yolla Yulia Putri. ':'Pernikahan Taufiqulhadi & Yolla Yulia Putri. ')+I18N[curLang]['l.time'];return 'https://calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent('Pernikahan Taufiqulhadi & Yolla Yulia Putri')+'&dates=20270321T010000Z/20270321T090000Z&details='+encodeURIComponent(det)+'&location='+encodeURIComponent(VENUE);}
+function calUrl(){var en=curLang==='en',det=(en?'Wedding of Taufiqulhadi & Yolla Yulia Putri. ':'Pernikahan Taufiqulhadi & Yolla Yulia Putri. ')+I18N[curLang]['l.time'],title=en?'Wedding of Taufiqulhadi & Yolla Yulia Putri':'Pernikahan Taufiqulhadi & Yolla Yulia Putri';return 'https://calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent(title)+'&dates=20270321T010000Z/20270321T090000Z&details='+encodeURIComponent(det)+'&location='+encodeURIComponent(VENUE);}
 (function(){var cb=document.getElementById('calBtn');if(cb)cb.href=calUrl();})();
 /* foto kartu bento */
 (function(){if(!LOVE_VIDEO){var st_=document.getElementById('story');if(st_)st_.style.display='none';var nv=document.querySelector('a[href="#story"]');if(nv)nv.style.display='none';}})();
